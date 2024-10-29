@@ -160,7 +160,23 @@ We’ve brought a brand-new update to **Astana Guide**, making it more interacti
 - 🖼️ **Local image storage** → all images are now stored **locally** for faster loading and better reliability (no external links required).  
 - 💅 **Improved design consistency** → refined spacing, typography, and button styles for a smoother visual experience.  
 
+# 🚀Project Update: Astana Guide
 
+**(Version V4.0 - Assignment 5)**
+
+We’re excited to announce a major update to **Astana Guide**, bringing new customization options, modern visuals, and smarter interactivity! 🌃  
+
+✨ **What’s new:**  
+- 🌑 **Dark Mode** → fully added **dark theme** support for a comfortable viewing experience at night or in low light.  
+- 🏙️ **Upgraded Sights page** → now even more dynamic and flexible:  
+  - 🖼️ You can **change images** of attractions directly.  
+  - 🔗 Update **links** to maps or extra info about each sight.  
+  - 👁️ Make any image **invisible** with one click.  
+  - 📝 Option to **hide text** when clicking on an image — perfect for a clean, focused view.  
+- 🎟️ **Events improvements** → added the ability to **remove “Planned to visit” blocks**, giving you full control over your event list.  
+- 🖼️ **About Us page gallery** → a brand-new **photo gallery** showcasing the Astana Guide team, city moments, and project highlights.  
+
+🧭 With these updates, **Astana Guide** becomes not just a travel helper — but your **personalized city experience platform**.
 
 
 <br>
