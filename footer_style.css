@@ -1,0 +1,22 @@
+.footer {
+    background: #2D2C3C;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.footer-contacts {
+    margin-top: 8px;
+}
+
+.footer-contacts a {
+    color: #FFE047;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-contacts a:hover {
+    text-decoration: underline;
+}
