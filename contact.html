@@ -38,6 +38,39 @@
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            
+            <h3 style="margin-top: 20px; color: #2C3E50;">Your Feedback</h3>
+            <table class="feedback-table">
+                <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Liked 👍</th>
+                    <th>Disliked 👎</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Design & Layout</td>
+                    <td><input type="checkbox" name="design_like"></td>
+                    <td><input type="checkbox" name="design_dislike"></td>
+                </tr>
+                <tr>
+                    <td>Navigation</td>
+                    <td><input type="checkbox" name="nav_like"></td>
+                    <td><input type="checkbox" name="nav_dislike"></td>
+                </tr>
+                <tr>
+                    <td>Content</td>
+                    <td><input type="checkbox" name="content_like"></td>
+                    <td><input type="checkbox" name="content_dislike"></td>
+                </tr>
+                <tr>
+                    <td>Overall Experience</td>
+                    <td><input type="checkbox" name="exp_like"></td>
+                    <td><input type="checkbox" name="exp_dislike"></td>
+                </tr>
+                </tbody>
+            </table>
 
             <input style="font-size: 20px" type="submit" value="Send">
         </form>
