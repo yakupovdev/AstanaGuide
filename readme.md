@@ -14,6 +14,13 @@ It serves as a digital guide for travelers and residents who want to:
 
 ---
 
+## 👨‍💻 Contribution of Authors  
+
+- **Vyacheslav Yakupov** — created the **Home page** (`index.html`) and **Contact page** (`contact.html`) along with their styles.  
+- **Marlen Zhumagulov** — developed the **Sights page** (`sights.html`) and **Events page** (`events.html`) with their corresponding styles.  
+
+---
+
 ## 🛠️ Components of the Website  
 
 ### 📂 HTML Pages  
