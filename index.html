@@ -3,34 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Astana Guide</title>
+
     <link rel="stylesheet" href="styles/index_style.css">
     <link rel="stylesheet" href="styles/header_style.css">
     <link rel="stylesheet" href="styles/footer_style.css">
+
     <link rel="preconnect" href="styles/https://fonts.googleapis.com">
     <link rel="preconnect" href="styles/https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
 
-    <style>
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: url("images/index_images/index_hero.jpg") no-repeat center/cover;
-            color: #FFD700;
-            text-shadow: 0 2px 6px rgba(0,0,0,0.8);
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
-        .hero p {
-            font-size: 22px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="images/icon.png">
+
 </head>
 <body>
 
@@ -38,13 +31,15 @@
 <div class="container">
     <header class="header">
         <a href="index.html" class="logo">
-            <span class="logo-icon"><img class="logo-img" src="images/logo.png"></span>
+            <span class="logo-icon"><img class="logo-img" src="images/icon.png"></span>
             <span class="logo-text">Astana Guide</span>
         </a>
         <nav class="nav">
             <ul>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="sights.html" class="nav-link">Sights</a></li>
                 <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -52,33 +47,115 @@
 
 
 <section class="hero">
-    <h1>SIGHTS & EVENTS</h1>
-    <p>Discover the landmarks, modern architecture, and vibrant cultural life of Kazakhstan’s capital</p>
-</section>
-
-
-<section class="about">
-    <img src="images/index_images/AstanaCity.jpg" alt="Astana city">
-    <div class="about-text">
-        <h2>Local Events & Activities Guide</h2>
-        <p>Astana is a city where futuristic skyscrapers meet rich cultural traditions. Here you can explore unique architecture like Bayterek Tower and Khan Shatyr, enjoy local festivals, concerts, and sports events. This guide will help you find the best places to see and the most exciting things to do in the capital of Kazakhstan.</p>
+    <div class="hero-content">
+        <h1>YOUR GUIDE</h1>
+        <h1>TO ASTANA</h1>
+        <a href="#cards" class="scroll-down" ><i class="fas fa-chevron-down"></i></a>
     </div>
 </section>
 
+<section id="cards" class="cards-section">
+    <div class="cards-header">
+        <h2>Trending Now in Astana</h2>
+    </div>
 
-<section class="sections">
-    <a href="sights.html" class="card">
-        <img src="images/index_images/index_sights.jpg" alt="Sights">
-        <h3>SIGHTS</h3>
-        <p>From the Bayterek Tower to Khan Shatyr and Hazrat Sultan Mosque — discover the must-see sights of Astana.</p>
-    </a>
+    <div class="cards-container">
+        <div class="card">
+            <img src="images/index_images/index_sights.jpg" alt="Sights">
+            <div class="card-overlay">
+                <span class="card-subtitle">ASTANA'S</span>
+                <h2 class="card-title">BEST SIGHTS</h2>
+                <a href="sights.html" class="card-btn">See the List →</a>
+            </div>
+        </div>
 
-    <a href="events.html" class="card">
-        <img src="images/index_images/index_events.webp" alt="Events">
-        <h3>EVENTS</h3>
-        <p>Music festivals, cultural celebrations, and national holidays — Astana always has something exciting happening.</p>
-    </a>
+        <div class="card">
+            <img src="images/index_images/index_events.webp" alt="Events">
+            <div class="card-overlay">
+                <span class="card-subtitle">EXPLORE</span>
+                <h2 class="card-title">OUR EVENTS GUIDE</h2>
+                <a href="events.html" class="card-btn">Explore Events →</a>
+            </div>
+        </div>
+    </div>
 </section>
+
+<section class="scroll-section">
+    <h2>Popular Sights</h2>
+    <div class="scroll-container">
+        <a href="sights.html#bayterek" class="scroll-item">
+            <img src="images/sights_images/sights_baiterek.jpg" alt="Sight 1">
+            <p>Bayterek Tower</p>
+        </a>
+        <a href="sights.html#khan-shatyr" class="scroll-item">
+            <img src="images/sights_images/sights_khan_shatyr.jpg" alt="Sight 2">
+            <p>Khan Shatyr</p>
+        </a>
+        <a href="sights.html#hazret-sultan" class="scroll-item">
+            <img src="images/index_images/sight3.jpg" alt="Sight 3">
+            <p>Hazret Sultan Mosque</p>
+        </a>
+        <a href="sights.html#expo" class="scroll-item">
+            <img src="images/index_images/sight4.jpg" alt="Sight 4">
+            <p>Expo 2017 Sphere</p>
+        </a>
+        <a href="sights.html#nuralem" class="scroll-item">
+            <img src="images/index_images/sight5.jpg" alt="Sight 5">
+            <p>Nur Alem Pavilion</p>
+        </a>
+        <a href="sights.html#palace" class="scroll-item">
+            <img src="images/index_images/sight6.jpg" alt="Sight 6">
+            <p>Presidential Palace</p>
+        </a>
+        <a href="sights.html#square" class="scroll-item">
+            <img src="images/index_images/sight7.jpg" alt="Sight 7">
+            <p>Independence Square</p>
+        </a>
+        <a href="sights.html#park" class="scroll-item">
+            <img src="images/index_images/sight8.jpg" alt="Sight 8">
+            <p>Astana Central Park</p>
+        </a>
+    </div>
+</section>
+
+<section class="scroll-section">
+    <h2>Popular Events</h2>
+    <div class="scroll-container">
+        <a href="events.html#opera" class="scroll-item">
+            <img src="images/events_images/events_backstreet_boys.jpg" alt="Event 1">
+            <p>Astana Opera<br><span>Oct 5, 2025</span></p>
+        </a>
+        <a href="events.html#jazz" class="scroll-item">
+            <img src="images/index_images/event2.jpg" alt="Event 2">
+            <p>Jazz Festival<br><span>Nov 12, 2025</span></p>
+        </a>
+        <a href="events.html#marathon" class="scroll-item">
+            <img src="images/index_images/event3.jpg" alt="Event 3">
+            <p>City Marathon<br><span>Sep 30, 2025</span></p>
+        </a>
+        <a href="events.html#winterfair" class="scroll-item">
+            <img src="images/index_images/event4.jpg" alt="Event 4">
+            <p>Winter Fair<br><span>Dec 15, 2025</span></p>
+        </a>
+        <a href="events.html#expo2026" class="scroll-item">
+            <img src="images/index_images/event5.jpg" alt="Event 5">
+            <p>Startup Expo<br><span>Jan 22, 2026</span></p>
+        </a>
+        <a href="events.html#foodfest" class="scroll-item">
+            <img src="images/index_images/event6.jpg" alt="Event 6">
+            <p>Food Festival<br><span>Mar 8, 2026</span></p>
+        </a>
+        <a href="events.html#concert" class="scroll-item">
+            <img src="images/index_images/event7.jpg" alt="Event 7">
+            <p>Spring Concert<br><span>Apr 20, 2026</span></p>
+        </a>
+        <a href="events.html#parade" class="scroll-item">
+            <img src="images/index_images/event8.jpg" alt="Event 8">
+            <p>National Day Parade<br><span>May 1, 2026</span></p>
+        </a>
+    </div>
+</section>
+
 
 
 <footer class="footer">
