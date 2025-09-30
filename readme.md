@@ -41,9 +41,9 @@ It serves as a digital guide for travelers and residents who want to:
 
 ---
 
-## 🌐 Website Structure
+# 🌐 Website Structure
 
-### 🏠 index.html — Home Page
+## 🏠 Home Page
 ![Homepage Header](readmeImages/homepageHeader.png)
 ![Homepage Center](readmeImages/homepageCenter.png)
 
@@ -60,10 +60,10 @@ It introduces users to the project and provides quick navigation to the main sec
 ![Homepage Footer](readmeImages/homepageFooter.png)
 ---
 
-### 🏙️ sights.html — Sights Page
+## 🏙️ Sights Page
 ![Sights Page](readmeImages/sightspage.png)
 
-# 🏙️ Sights Page
+
 
 The **Sights page** showcases Astana’s most popular landmarks and cultural attractions.  
 
@@ -77,12 +77,12 @@ The **Sights page** showcases Astana’s most popular landmarks and cultural att
 
 ---
 
-### 🎶 events.html — Events Page
+## 🎉 Events Page
 ![Events Page](readmeImages/eventspage.png)
 
 
 
-# 🎉 Events Page
+
 
 The **Events page** highlights upcoming concerts, shows, and sports matches in Astana.  
 
@@ -93,7 +93,7 @@ The **Events page** highlights upcoming concerts, shows, and sports matches in A
   
 
 ---
-# ℹ️ About Us Page
+## ℹ️ About Us Page
 
 ![About Page](readmeImages/aboutpage.png)
 
@@ -106,7 +106,7 @@ The **About Us page** introduces the Astana Guide project and its purpose.
 
 ---
 
-### ✉️ contact.html — Contact Page 
+## ✉️ Contact page 
 ![Contact Page](readmeImages/contactpage.png)
 
 The **Contact page** allows users to reach out and provide feedback.  
@@ -116,12 +116,6 @@ The **Contact page** allows users to reach out and provide feedback.
 - **Feedback table** → users can indicate what they liked or disliked about the website (*Design, Navigation, Content, Overall Experience*).  
 - **Submit button** → simple form submission option.  
 - **Navigation & footer** → consistent with the other pages.    
-
----
-
-## 🚀 Deployment  
-The project is deployed via **GitHub Pages** and can be accessed here:  
-👉 [Astana Guide Live Demo](https://yakupovdev.github.io/AstanaGuide/) 📸 
 
 ---
 <br>
@@ -142,3 +136,10 @@ We’ve given **Astana Guide** a full makeover to make it more modern, user-frie
 - 📜 **Smooth scrolling** → horizontal scroll sections for attractions and events.  
 
 💡 The result: a more **engaging, colorful, and intuitive guide** to Astana’s sights and events.  
+
+<br>
+<br>
+
+# 🚀 Deployment  
+The project is deployed via **GitHub Pages** and can be accessed here:  
+👉 [Astana Guide Live Demo](https://yakupovdev.github.io/AstanaGuide/) 📸 
