@@ -59,8 +59,12 @@ html {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 body {
@@ -74,24 +78,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 10%;
+    padding: 60px 0;
     background: #fff;
-}
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
 }
 
 .card {
     position: relative;
-    flex: 1;
+
     min-height: 500px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -113,7 +110,7 @@ body {
     left: 0;
     width: 100%;
     padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     color: #fff;
 }
 
@@ -163,7 +160,7 @@ body {
 }
 
 .scroll-section {
-    padding: 40px 10% 50px;
+    padding: 40px 0 50px;
     background: #fff;
     margin: 0;
 }
@@ -175,6 +172,7 @@ body {
     font-family: "Oswald", sans-serif;
     color: #222;
     text-transform: uppercase;
+    padding-left: 1rem;
 }
 
 .scroll-container {
@@ -183,6 +181,7 @@ body {
     gap: 20px;
     scroll-behavior: smooth;
     padding-bottom: 10px;
+    padding: 0 1rem 10px 1rem;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -200,7 +199,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     background: #f9f9f9;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     text-align: center;
 }
@@ -237,7 +236,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     background: #f9f9f9;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     min-width: 220px;
     flex: 0 0 auto;
@@ -267,7 +266,7 @@ body {
 
 .scroll-container a:hover {
     transform: translateY(-6px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     background: #ffffff;
 }
 
@@ -275,4 +274,26 @@ body {
     color: #0077cc;
 }
 
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 60px;
+    }
 
+    .card {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .card-title {
+        font-size: 28px;
+    }
+
+    .card {
+        min-height: 350px;
+    }
+}

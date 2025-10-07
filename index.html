@@ -3,23 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astana Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles/index_style.css">
     <link rel="stylesheet" href="styles/header_style.css">
     <link rel="stylesheet" href="styles/footer_style.css">
 
-    <link rel="preconnect" href="styles/https://fonts.googleapis.com">
-    <link rel="preconnect" href="styles/https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -29,24 +27,25 @@
 </head>
 
 <body>
+<div class="container-fluid p-0">
 
-
-    <div class="container">
-        <header class="header">
-            <a href="index.html" class="logo">
-                <span class="logo-icon"><img class="logo-img" src="images/icon.png"></span>
-                <span class="logo-text">Astana Guide</span>
+    <header class="header shadow-sm">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
+            <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+                <img class="logo-img me-2" src="images/icon.png" alt="Logo">
+                <span class="logo-text fw-bold">Astana Guide</span>
             </a>
             <nav class="nav">
-                <ul>
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="sights.html" class="nav-link">Sights</a></li>
-                    <li><a href="events.html" class="nav-link">Events</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                <ul class="nav list-unstyled d-flex mb-0">
+                    <li><a href="index.html" class="nav-link px-3">Home</a></li>
+                    <li><a href="sights.html" class="nav-link px-3">Sights</a></li>
+                    <li><a href="events.html" class="nav-link px-3">Events</a></li>
+                    <li><a href="about.html" class="nav-link active px-3">About Us</a></li>
                 </ul>
             </nav>
-        </header>
-    </div>
+        </div>
+    </header>
+
 
 
     <section class="hero">
@@ -58,109 +57,125 @@
     </section>
 
     <section id="cards" class="cards-section">
-        <div class="cards-header">
-            <h2>Trending Now in Astana</h2>
-        </div>
-
-        <div class="cards-container">
-            <div class="card">
-                <img src="images/index_images/index_sights.jpg" alt="Sights">
-                <div class="card-overlay">
-                    <span class="card-subtitle">ASTANA'S</span>
-                    <h2 class="card-title">BEST SIGHTS</h2>
-                    <a href="sights.html" class="card-btn">See the List →</a>
-                </div>
+        <div class="container">
+            <div class="cards-header">
+                <h2>Trending Now in Astana</h2>
             </div>
 
-            <div class="card">
-                <img src="images/index_images/index_events.webp" alt="Events">
-                <div class="card-overlay">
-                    <span class="card-subtitle">EXPLORE</span>
-                    <h2 class="card-title">OUR EVENTS GUIDE</h2>
-                    <a href="events.html" class="card-btn">Explore Events →</a>
+            <div class="row justify-content-center g-4">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <img src="images/index_images/index_sights.jpg" alt="Sights">
+                        <div class="card-overlay">
+                            <span class="card-subtitle">ASTANA'S</span>
+                            <h2 class="card-title">BEST SIGHTS</h2>
+                            <a href="sights.html" class="card-btn">See the List →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <img src="images/index_images/index_events.webp" alt="Events">
+                        <div class="card-overlay">
+                            <span class="card-subtitle">EXPLORE</span>
+                            <h2 class="card-title">OUR EVENTS GUIDE</h2>
+                            <a href="events.html" class="card-btn">Explore Events →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="scroll-section">
-        <h2>Popular Sights</h2>
-        <div class="scroll-container">
-            <a href="sights.html#bayterek" class="scroll-item">
-                <img src="images/sights_images/sights_baiterek.jpg" alt="Sight 1">
-                <p>Bayterek Tower</p>
-            </a>
-            <a href="sights.html#khan-shatyr" class="scroll-item">
-                <img src="images/sights_images/sights_khan_shatyr.jpg" alt="Sight 2">
-                <p>Khan Shatyr</p>
-            </a>
-            <a href="sights.html#hazret-sultan" class="scroll-item">
-                <img src="https://www.advantour.com/img/kazakhstan/astana/hazrat-sultan-mosque1.jpg" alt="Sight 3">
-                <p>Hazret Sultan Mosque</p>
-            </a>
-            <a href="sights.html#expo" class="scroll-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1ntaKP4EjANS4rMxf6slnpgDqlwD7n-BJw&s" alt="Sight 4">
-                <p>Expo 2017 Sphere</p>
-            </a>
-            <a href="sights.html#akorda" class="scroll-item">
-                <img src="https://akorda.kz/assets/media/daa-0884-2_mediumThumb.jpg" alt="Sight 6">
-                <p>Presidential Palace</p>
-            </a>
-            <a href="sights.html#square" class="scroll-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kazakh_Eli.jpg" alt="Sight 7">
-                <p>Independence Square</p>
-            </a>
-            <a href="sights.html#park" class="scroll-item">
-                <img src="https://ink-a.com/assets/components/phpthumbof/cache/Central%20Park%20Panoramaday_resized.aa0fdfa69740d22a4e3cc983a4aaa0ed.webp" alt="Sight 8">
-                <p>Astana Central Park</p>
-            </a>
+        <div class="container">
+            <h2>Popular Sights</h2>
+            <div class="scroll-container">
+                <a href="sights.html#bayterek" class="scroll-item">
+                    <img src="images/sights_images/sights_baiterek.jpg" alt="Sight 1">
+                    <p>Bayterek Tower</p>
+                </a>
+                <a href="sights.html#khan-shatyr" class="scroll-item">
+                    <img src="images/sights_images/sights_khan_shatyr.jpg" alt="Sight 2">
+                    <p>Khan Shatyr</p>
+                </a>
+                <a href="sights.html#hazret-sultan" class="scroll-item">
+                    <img src="https://www.advantour.com/img/kazakhstan/astana/hazrat-sultan-mosque1.jpg" alt="Sight 3">
+                    <p>Hazret Sultan Mosque</p>
+                </a>
+                <a href="sights.html#expo" class="scroll-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1ntaKP4EjANS4rMxf6slnpgDqlwD7n-BJw&s"
+                         alt="Sight 4">
+                    <p>Expo 2017 Sphere</p>
+                </a>
+                <a href="sights.html#akorda" class="scroll-item">
+                    <img src="https://akorda.kz/assets/media/daa-0884-2_mediumThumb.jpg" alt="Sight 6">
+                    <p>Presidential Palace</p>
+                </a>
+                <a href="sights.html#square" class="scroll-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kazakh_Eli.jpg" alt="Sight 7">
+                    <p>Independence Square</p>
+                </a>
+                <a href="sights.html#park" class="scroll-item">
+                    <img src="https://ink-a.com/assets/components/phpthumbof/cache/Central%20Park%20Panoramaday_resized.aa0fdfa69740d22a4e3cc983a4aaa0ed.webp"
+                         alt="Sight 8">
+                    <p>Astana Central Park</p>
+                </a>
+            </div>
         </div>
     </section>
 
     <section class="scroll-section">
-        <h2>Popular Events</h2>
-        <div class="scroll-container">
-            <a href="events.html#besbayev" class="scroll-item active">
-                <img src="https://ticketon.kz/media/upload/59829u45664_meyrambek-besbaev-i-abdizhappar-alkozha-v-almaty.jpg"
-                    alt="Meirambek Besbayev & Abdizhappar Alkozha">
-                <p>Besbayev & Alkozha<br><span>Oct 5, 2025</span></p>
-            </a>
-            <a href="events.html#kvashonkin" class="scroll-item">
-                <img src="https://ticketon.kz/media/upload/56984u55483_solnyy-stendap-kontsert-alekseya-kvashonkina-v-astane.jpg"
-                    alt="Aleksey Kvashonkin">
-                <p>Aleksey Kvashonkin<br><span>Nov 12, 2025</span></p>
-            </a>
-            <a href="events.html#kaz-liechtenstein" class="scroll-item">
-                <img src="https://ticketon.kz/media/upload/60468u57260_kazakhstan-liechtenstein-29-09.jpg"
-                    alt="Kazakhstan vs Liechtenstein">
-                <p>Kazakhstan vs Liechtenstein<br><span>Sep 30, 2025</span></p>
-            </a>
-            <a href="events.html#kaz-belgium" class="scroll-item">
-                <img src="https://ticketon.kz/files/media/%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%20U21%20-%20%D0%91%D0%B5%D0%BB%D1%8C%D0%B3%D0%B8%D1%8F%20U21465456.jpg"
-                    alt="Kazakhstan vs Belgium">
-                <p>Kazakhstan vs Belgium<br><span>Dec 15, 2025</span></p>
-            </a>
-            <a href="events.html#rasmus" class="scroll-item">
-                <img src="https://ticketon.kz/files/media/13401u15171_rasmus.jpg" alt="The Rasmus">
-                <p>The Rasmus<br><span>Jan 22, 2026</span></p>
-            </a>
-            <a href="events.html#vanzo" class="scroll-item">
-                <img src="data:image/jpeg;base64,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"
-                    alt="Andrea Vanzo">
-                <p>Andrea Vanzo<br><span>Mar 8, 2026</span></p>
-            </a>
+        <div class="container">
+            <h2>Popular Events</h2>
+            <div class="scroll-container">
+                <a href="events.html#besbayev" class="scroll-item active">
+                    <img src="https://ticketon.kz/media/upload/59829u45664_meyrambek-besbaev-i-abdizhappar-alkozha-v-almaty.jpg"
+                         alt="Meirambek Besbayev & Abdizhappar Alkozha">
+                    <p>Besbayev & Alkozha<br><span>Oct 5, 2025</span></p>
+                </a>
+                <a href="events.html#kvashonkin" class="scroll-item">
+                    <img src="https://ticketon.kz/media/upload/56984u55483_solnyy-stendap-kontsert-alekseya-kvashonkina-v-astane.jpg"
+                         alt="Aleksey Kvashonkin">
+                    <p>Aleksey Kvashonkin<br><span>Nov 12, 2025</span></p>
+                </a>
+                <a href="events.html#kaz-liechtenstein" class="scroll-item">
+                    <img src="https://ticketon.kz/media/upload/60468u57260_kazakhstan-liechtenstein-29-09.jpg"
+                         alt="Kazakhstan vs Liechtenstein">
+                    <p>Kazakhstan vs Liechtenstein<br><span>Sep 30, 2025</span></p>
+                </a>
+                <a href="events.html#kaz-belgium" class="scroll-item">
+                    <img src="https://ticketon.kz/files/media/%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%20U21%20-%20%D0%91%D0%B5%D0%BB%D1%8C%D0%B3%D0%B8%D1%8F%20U21465456.jpg"
+                         alt="Kazakhstan vs Belgium">
+                    <p>Kazakhstan vs Belgium<br><span>Dec 15, 2025</span></p>
+                </a>
+                <a href="events.html#rasmus" class="scroll-item">
+                    <img src="https://ticketon.kz/files/media/13401u15171_rasmus.jpg" alt="The Rasmus">
+                    <p>The Rasmus<br><span>Jan 22, 2026</span></p>
+                </a>
+                <a href="events.html#vanzo" class="scroll-item">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxESERUREBAVFRUVEBgVFRUVFxYYGBcVGRYWGBcVFxUYHigiGBonHRUVITEiJSkrLi4uFyAzODMtNygtLisBCgoKDg0OGhAPGi0fHh8tLS0rKy0uLS0tLS0rLS0rLS0tLS0tLS0rLS0tLS0tLS0tLS0yLS0tLS0tLSs3LS0rLf/AABEIAQsAvQMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAAAQIDBgQFBwj/xABNEAACAQMCAgYGBAgMAwkAAAABAgMABBESIQUxBhMiQVFhBxQycYGRQlKhsSMzNHKSwdHwFRYZJURTVGJ0ssLDgpOiRGNkc4Oz0uHx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAhEQEBAAMAAgICAwAAAAAAAAAAAQIREgMhE1ExQQRxof/aAAwDAQACEQMRAD8A6xijFeTf4Zuv7VP/AM2T/wCVSW3FLp2C+uypk41PNIFPvOTgVR6uxRivMPSGLiFlMILi7k1lFfsXEjLpb2TqBwQRtmthDwTibyQQpfgyXKa4UF1JllIJBI+jnBxnGcUHo7FJivKd1xO7jdkN5KSrFSVmkKkjY4Od66F6Db+aS8nEs0jgWuQHdmAPWLuAxoO1UUUUBRRRQFFFFAUUUUBRRRQFQn991TUUCd+d28qUeVPooPJFT+C6h7C2eSQo0lxbxK6kgFG6iMsDjfGSN+/zrl3TfplxVrpNnF6qB3k/n23uA5ZONJIG+2eQr1vRR+Wwf8F/uLXZ/P937v6OfL4/f6j2DiuJ/XfUaEhh9Yq6u3n7Wdu4ZqI8RllcyyyySEgAl3ZiQNtozxOwG/cK1s3G71uIvaG5kDxzMhQSEAKrgABdthgVt+kPTu74XdxQLbwypJDG7h2cF3kQMezIAFAdlA+c2e6tV/BjjM8T9L+J2/GZbeOWJmS4aM5jZSMNqxk4I5j313ro/wDD9n/gF/uLXmrhPSVfz/jX+juf8A0Xro3o+vVfD7aT1jVl6kX+rJqzge2v4vj30Gqf084kASZ4sEb/gE7Z5/hNq8/gN9+6uicN4dBEuIYkjGScKoUZPM4Hia45xT0vXF/xN+G2cEEjLKyNLqdXZVcqSowF3G3j4VL/wAIdy41G1tF1bHtx7+fW1n+B+X/AOf8v6f/ALNvx4f3Vn8v8l39dE77f3d/wD0/wD6/wD612vF/RfxHh6fXwwzQ/9/bESr+lG/Gf+Wq7wz0wXh/wAU8Kmt35mR8Sj+xJ+P+6oJ4v6TLvjM/U3ssUeG1aYkdgkYIznU3v2rB4b0o4jZtI1tO8XWDS+k7nmc5z9Y/OtdxLgl3YS6Z4ZInzzZRgnz5H4Gsl/CJe4t/n1r1c2/wCki2Gf1lPy+B9xqL9w4B6Srh+LfhS8SK3lSRpEkcMVlCgk6dIAO+oY8/nXd0gYbqy/N/7+Vc39H3o2ntuOzeuW8b/Vw9WMQxtq6zVn2Tnw99dIp78/H30BTiKU04CgKKKKAooooPJFKO8UmKUF+g6e9IeH23VTxo7gkk9bEoydhjDnFa3/hF4p/2WH/jIP9au80mK1mUfQ6u0+l/in/ZYf8AjIP9akf8ItxNf+yw/wDGQf613yilzWnO/o4zF6X+Kf9lh/4yD/Wobf6YcXjYNHDBGVwca4hjI58+z4V3/FLmhr/ADb5/wD33iP8A1sP+v/8AWpbfphxeMkpHBDGScnTXEoz3Z+iO6uzUtT+Xf59F3Ff+rD/x0H+v/wDrUn/CLxT/ALK/8AjIP9a7pS5qfyrfD3p/wARvB1dxFHKmSNJiQc/pNX6q223p7xA/jW9mR4NHHj54rpdLmmfK3n/AB3pM4k4X1dpIfAwoPzLfrqM+mXFB/wBPD/x0H+td2oo3g4ZJ024n/wBvD/x0H+tN/wAInFP+xw/8ZB/rXdKMUCsPox9Jt/x+W4R4kSKFY9JjDEkMSc5J8q68BTaUC0UtFAUUUUH//2Q=="
+                         alt="Andrea Vanzo">
+                    <p>Andrea Vanzo<br><span>Mar 8, 2026</span></p>
+                </a>
+            </div>
         </div>
     </section>
 
-
-
-    <footer class="footer">
-        <p>© 2025 Astana Guide. All Rights Reserved.</p>
-        <div class="footer-contacts">
-            <a href="contact.html">Contact Us</a>
+    <footer class="footer mt-auto">
+        <div class="container text-center">
+            <p>© 2025 Astana Guide. All Rights Reserved.</p>
+            <div class="footer-contacts">
+                <a href="contact.html">Contact Us</a>
+            </div>
         </div>
     </footer>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
