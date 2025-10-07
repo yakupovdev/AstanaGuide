@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -9,129 +7,52 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     background: #eef3f7;
 }
 
-main {
-    flex: 1;
-}
-
-.contact {
-    max-width: 600px;
-    margin: 60px auto;
+.contact-card {
     padding: 30px;
     background: #ffffffd9;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     text-align: center;
-    font-family: Lalezar, sans-serif;
 }
 
-.contact h2 {
+.contact-card h2 {
     margin-bottom: 20px;
     color: #2C3E50;
 }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact label {
-    text-align: left;
-    font-weight: 500;
-    color: #444;
-}
-
-.contact input[type="text"],
-.contact input[type="email"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-.contact input[type="submit"] {
+.btn-custom {
     padding: 12px;
     background: #18cffc;
     border: none;
     border-radius: 6px;
+    color: #212529;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    font-size: 20px;
 }
 
-.contact input[type="submit"]:hover {
+.btn-custom:hover {
     background: #12a4c9;
+    color: #212529;
 }
 
-.feedback-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 16px;
-    text-align: center;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.feedback-table th {
+.feedback-table thead th {
     background: #2D2C3C;
     color: #18cffc;
-    padding: 12px;
+    vertical-align: middle;
 }
 
 .feedback-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
     color: #333;
 }
 
-.feedback-table tr:nth-child(even) {
-    background: #f9f9f9;
-}
-
-.feedback-table input[type="checkbox"] {
-    transform: scale(1.2);
+.feedback-table .form-check-input {
+    transform: scale(1.4);
     cursor: pointer;
+    margin: 0 auto;
+    float: none;
 }
-
-
-.feedback-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 16px;
-    text-align: center;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.feedback-table th {
-    background: #2D2C3C;
-    color: #18cffc;
-    padding: 12px;
-}
-
-.feedback-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    color: #333;
-}
-
-.feedback-table tr:nth-child(even) {
-    background: #f9f9f9;
-}
-
-.feedback-table input[type="checkbox"] {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
