@@ -4,52 +4,64 @@
     <meta charset="UTF-8">
     <title>AG AboutUs</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/about_style.css">
     <link rel="stylesheet" href="styles/header_style.css">
     <link rel="stylesheet" href="styles/footer_style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="images/icon.png">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-
-<div class="container">
-    <header class="header">
-        <a href="index.html" class="logo">
-            <span class="logo-icon"><img class="logo-img" src="images/icon.png"></span>
-            <span class="logo-text">Astana Guide</span>
+<header class="header shadow-sm">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
+        <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+            <img class="logo-img me-2" src="images/icon.png" alt="Logo">
+            <span class="logo-text fw-bold">Astana Guide</span>
         </a>
         <nav class="nav">
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="sights.html" class="nav-link">Sights</a></li>
-                <li><a href="events.html" class="nav-link">Events</a></li>
-                <li><a href="about.html" class="nav-link active">About Us</a></li>
+            <ul class="nav list-unstyled d-flex mb-0">
+                <li><a href="index.html" class="nav-link px-3">Home</a></li>
+                <li><a href="sights.html" class="nav-link px-3">Sights</a></li>
+                <li><a href="events.html" class="nav-link px-3">Events</a></li>
+                <li><a href="about.html" class="nav-link active px-3">About Us</a></li>
             </ul>
         </nav>
-    </header>
-</div>
+    </div>
+</header>
 
-<section id="about" class="about">
-    <img src="images/index_images/AstanaCity.jpg" alt="Astana city">
-    <div class="about-text">
-        <h2>Local Events & Sights Guide</h2>
-        <p>Astana is a city where futuristic skyscrapers meet rich cultural traditions. Here you can explore unique architecture like Bayterek Tower and Khan Shatyr, enjoy local festivals, concerts, and sports events. This guide will help you find the best places to see and the most exciting things to do in the capital of Kazakhstan.</p>
+<section id="about" class="about py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-center">
+                <img src="images/index_images/AstanaCity.jpg" alt="Astana city" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-text">
+                    <h2>Local Events & Sights Guide</h2>
+                    <p>Astana is a city where futuristic skyscrapers meet rich cultural traditions. Here you can explore unique architecture like Bayterek Tower and Khan Shatyr, enjoy local festivals, concerts, and sports events. This guide will help you find the best places to see and the most exciting things to do in the capital of Kazakhstan.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-
-<footer class="footer">
-    <p>© 2025 Astana Guide. All Rights Reserved.</p>
-    <div class="footer-contacts">
-        <a href="contact.html">Contact Us</a>
+<footer class="footer mt-auto">
+    <div class="container text-center">
+        <p>© 2025 Astana Guide. All Rights Reserved.</p>
+        <div class="footer-contacts">
+            <a href="contact.html">Contact Us</a>
+        </div>
     </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
