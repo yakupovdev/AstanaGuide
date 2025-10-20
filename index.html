@@ -185,5 +185,36 @@
     </div>
 </footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+<script>
+    document.querySelectorAll('.scroll-section').forEach(section => {
+        const container = section.querySelector('.scroll-container');
+        const leftBtn = section.querySelector('.scroll-btn.left');
+        const rightBtn = section.querySelector('.scroll-btn.right');
+
+        container.addEventListener('wheel', evt => {
+            evt.preventDefault();
+            container.scrollBy({left: evt.deltaY < 0 ? -150 : 150, behavior: 'smooth'});
+        });
+
+        leftBtn.addEventListener('click', () => {
+            container.scrollBy({left: -300, behavior: 'smooth'});
+        });
+        rightBtn.addEventListener('click', () => {
+            container.scrollBy({left: 300, behavior: 'smooth'});
+        });
+
+        const items = container.querySelectorAll('.scroll-item');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, {threshold: 0.3});
+        items.forEach(item => observer.observe(item));
+    });
+</script>
 </body>
 </html>
