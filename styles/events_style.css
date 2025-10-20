@@ -152,6 +152,112 @@ body {
     text-overflow: ellipsis;
 }
 
+.planner-summary-section {
+    padding-bottom: 60px;
+}
+
+.planner-summary-section h2 {
+    font-size: 34px;
+    color: #2D2C3C;
+    margin-bottom: 10px;
+}
+
+.event-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+
+.planner-btn {
+    padding: 9px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #f1f3f6;
+    color: #2D2C3C;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.planner-btn:hover {
+    background: #e5f9fe;
+    box-shadow: 0 8px 18px rgba(24, 207, 252, 0.25);
+}
+
+.planner-btn.active[data-value="wish"] {
+    background: #18cffc;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(24, 207, 252, 0.35);
+}
+
+.planner-btn.active[data-value="done"] {
+    background: #52c41a;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(82, 196, 26, 0.35);
+}
+
+.planner-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background: #eceff3;
+    color: #9aa0af;
+    box-shadow: none;
+}
+
+.planner-btn.planner-btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background: #eceff3;
+    color: #9aa0af;
+    box-shadow: none;
+}
+
+.planner-summary {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px 28px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.planner-summary h2 {
+    font-size: 24px;
+    color: #2D2C3C;
+    margin-bottom: 14px;
+}
+
+.planner-summary-empty {
+    color: #777;
+    font-size: 16px;
+    margin: 0;
+}
+
+.planner-summary-list {
+    display: none;
+    gap: 14px;
+}
+
+.planner-summary-item {
+    padding: 16px 20px;
+    border-radius: 14px;
+    background: rgba(24, 207, 252, 0.08);
+    border: 1px solid rgba(24, 207, 252, 0.3);
+    text-align: left;
+}
+
+.planner-summary-item h4 {
+    font-size: 18px;
+    color: #2D2C3C;
+    margin-bottom: 6px;
+}
+
+.planner-summary-item span {
+    font-size: 15px;
+    color: #555;
+}
+
 @media (max-width: 992px) {
     .sight-view {
         min-height: auto;
@@ -183,6 +289,16 @@ body {
     .sight-content img.img-fluid {
         max-height: 250px;
     }
+
+    .planner-summary-section h2 {
+        font-size: 30px;
+    }
+
+    .event-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -196,5 +312,9 @@ body {
 
     .scroll-item img {
         height: 80px;
+    }
+
+    .planner-summary-section {
+        padding-bottom: 40px;
     }
 }
