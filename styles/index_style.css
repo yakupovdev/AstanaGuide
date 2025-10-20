@@ -141,10 +141,10 @@ body {
 
 .scroll-container::-webkit-scrollbar { display: none; }
 
+/* Универсальный стиль карточек (в т.ч. Popular Events) */
 .scroll-item {
     flex: 0 0 auto;
     width: 240px;
-    height: 300px;
     border-radius: 15px;
     background: #f9f9f9;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -169,27 +169,28 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
+/* Адаптивная высота для изображений */
 .scroll-item img {
     width: 100%;
-    height: 85%;
+    aspect-ratio: 1 / 1; /* можно поменять на 4/3 при желании */
     object-fit: cover;
-    display: block;
     border-radius: 15px 15px 0 0;
 }
 
+/* Текст и дата снизу занимают естественную высоту */
 .scroll-item p {
     font-size: 15px;
     font-weight: 600;
-    padding: 6px 8px;
+    padding: 8px 10px 12px;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .scroll-item span {
     display: block;
     font-size: 13px;
     color: #777;
-    margin-top: 2px;
+    margin-top: 3px;
 }
 
 .scroll-btn {
@@ -220,14 +221,12 @@ body {
 @media (max-width: 768px) {
     .hero h1 { font-size: 60px; }
     .card { min-height: 400px; }
-    .scroll-item { width: 200px; height: 270px; }
-    .scroll-item img { height: 82%; }
+    .scroll-item { width: 200px; }
 }
 
 @media (max-width: 576px) {
     .hero h1 { font-size: 48px; }
     .card { min-height: 350px; }
-    .scroll-item { width: 180px; height: 240px; }
-    .scroll-item img { height: 80%; }
+    .scroll-item { width: 180px; }
     .scroll-btn { width: 35px; height: 35px; font-size: 16px; }
 }
