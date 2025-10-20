@@ -61,7 +61,8 @@ It introduces users to the project and provides quick navigation to the main sec
 ---
 
 ## 🏙️ Sights Page
-![Sights Page](readmeImages/sightspage.png)
+![Sights Page](readmeImages/sightspageInfo.png)
+![Sights Page](readmeImages/sightspageMap.png)
 
 
 
@@ -78,7 +79,8 @@ The **Sights page** showcases Astana’s most popular landmarks and cultural att
 ---
 
 ## 🎉 Events Page
-![Events Page](readmeImages/eventspage.png)
+![Events Page](readmeImages/eventspageCenter.png)
+![Events Page](readmeImages/eventspageList.png)
 
 
 
