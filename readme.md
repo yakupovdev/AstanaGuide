@@ -70,7 +70,8 @@ The **Sights page** showcases Astana’s most popular landmarks and cultural att
 
 **Key elements:**  
 - 🧭 **Navigation header** → logo and menu for Home, Sights, Events, About Us.  
-- 🗼 **Sight view section** → detailed blocks with image, title, and description for each landmark (*Bayterek Tower, Khan Shatyr, Hazret Sultan Mosque, Akorda Palace, Nur-Astana Mosque, Expo 2017, Independence Square, Central Park*).  
+- 🗺️ **Sigt map section** → location of this landmark.
+- 🗼 **Sight info section** → detailed blocks with image, title, and description for each landmark (*Bayterek Tower, Khan Shatyr, Hazret Sultan Mosque, Akorda Palace, Nur-Astana Mosque, Expo 2017, Independence Square, Central Park*).  
 - 📜 **Scroll gallery** → horizontal thumbnail navigation that highlights the selected sight and updates the view.  
 - 📩 **Footer** → copyright and contact.  
 
@@ -91,6 +92,7 @@ The **Events page** highlights upcoming concerts, shows, and sports matches in A
 **Key elements:**  
 - 🧭 **Navigation header** → consistent with other pages (Home, Sights, Events, About Us).  
 - 🎭 **Event cards** → each event includes an image, title, date, and short description (*concerts, football matches, stand-up shows*).  
+- ✅ **To-do list** → two block "visited" and "wants to visit", if  you click on “wants to visit,” it will appear at the bottom of the scheduled events to visit.
 - 📩 **Footer** → copyright and contact.  
   
 
@@ -140,6 +142,27 @@ We’ve given **Astana Guide** a full makeover to make it more modern, user-frie
 💡 The result: a more **engaging, colorful, and intuitive guide** to Astana’s sights and events.  
 
 <br>
+
+# 🚀Project Update: Astana Guide
+
+**(Version V3.1 - Assignment 4)** 
+
+We’ve brought a brand-new update to **Astana Guide**, making it more interactive, informative, and personalized than ever before!  
+
+✨ **What’s new:**  
+- 🗺️ **New dual-section layout in Sights** → the *Sights* page is now divided into two parts:  
+  - **Map section** — displays the exact **location** of each attraction on an interactive map.  
+  - **Info section** — provides detailed **information** about the attraction (history, facts, and tips).  
+- 🎯 **Interactive Events system** → added two new buttons:  
+  - **“Visited”** — mark events you’ve already attended.  
+  - **“Wants to visit”** — plan upcoming visits.  
+- 📝 **To-Do List integration** → when you click **“Wants to visit”**, the event automatically appears below in a *“Planned visits”* list, helping you organize your travel plans.  
+- 🖼️ **Local image storage** → all images are now stored **locally** for faster loading and better reliability (no external links required).  
+- 💅 **Improved design consistency** → refined spacing, typography, and button styles for a smoother visual experience.  
+
+
+
+
 <br>
 
 # 🚀 Deployment  
