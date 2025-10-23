@@ -8,19 +8,86 @@
 
 body {
     background: #eef3f7;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-theme {
+    background: #1a1a1a;
+    color: #e0e0e0;
 }
 
 .contact-card {
     padding: 30px;
     background: #ffffffd9;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease, background-color 0.4s ease;
+}
+
+.contact-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-theme .contact-card {
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .contact-card h2 {
     margin-bottom: 20px;
     color: #2C3E50;
+    transition: color 0.4s ease;
+}
+
+body.dark-theme .contact-card h2 {
+    color: #63b3ed;
+}
+
+.feedback-title {
+    color: #2C3E50;
+    transition: color 0.4s ease;
+}
+
+body.dark-theme .feedback-title {
+    color: #63b3ed;
+}
+
+.form-label {
+    color: #333;
+    transition: color 0.4s ease;
+}
+
+body.dark-theme .form-label {
+    color: #e0e0e0;
+}
+
+.form-control {
+    background: #fff;
+    border: 1px solid #ced4da;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .form-control {
+    background: #1a1a1a;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.form-control:focus {
+    background: #fff;
+    border-color: #18cffc;
+    box-shadow: 0 0 0 0.2rem rgba(24, 207, 252, 0.25);
+}
+
+body.dark-theme .form-control:focus {
+    background: #1a1a1a;
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 0.2rem rgba(99, 179, 237, 0.25);
 }
 
 .btn-custom {
@@ -31,23 +98,61 @@ body {
     color: #212529;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
     font-size: 20px;
 }
 
 .btn-custom:hover {
     background: #12a4c9;
     color: #212529;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 207, 252, 0.4);
+}
+
+body.dark-theme .btn-custom {
+    background: #63b3ed;
+    color: #fff;
+}
+
+body.dark-theme .btn-custom:hover {
+    background: #4a9fd8;
+    color: #fff;
+}
+
+.feedback-table {
+    transition: all 0.4s ease;
 }
 
 .feedback-table thead th {
     background: #2D2C3C;
     color: #18cffc;
     vertical-align: middle;
+    transition: all 0.4s ease;
+}
+
+body.dark-theme .feedback-table thead th {
+    background: #1a1a1a;
+    color: #63b3ed;
+    border-color: #444;
 }
 
 .feedback-table td {
     color: #333;
+    transition: all 0.4s ease;
+}
+
+body.dark-theme .feedback-table td {
+    color: #e0e0e0;
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+body.dark-theme .feedback-table tbody tr {
+    background: #2a2a2a;
+}
+
+body.dark-theme .feedback-table tbody tr:hover {
+    background: #333;
 }
 
 .feedback-table .form-check-input {
@@ -55,4 +160,93 @@ body {
     cursor: pointer;
     margin: 0 auto;
     float: none;
+    transition: all 0.2s ease;
+}
+
+.feedback-table .form-check-input:hover {
+    transform: scale(1.5);
+}
+
+body.dark-theme .feedback-table .form-check-input {
+    background-color: #1a1a1a;
+    border-color: #666;
+}
+
+body.dark-theme .feedback-table .form-check-input:checked {
+    background-color: #63b3ed;
+    border-color: #63b3ed;
+}
+
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+body.dark-theme .theme-toggle-btn {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+}
+
+.theme-toggle-btn:hover {
+    background: #63b3ed;
+    border-color: #63b3ed;
+    color: #fff;
+    transform: rotate(20deg);
+}
+
+.theme-toggle-btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+#responseMessage {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 20px;
+    }
+
+    .btn-custom {
+        font-size: 18px;
+    }
+
+    .theme-toggle-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .theme-toggle-btn i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .theme-toggle-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .theme-toggle-btn i {
+        font-size: 14px;
+    }
 }

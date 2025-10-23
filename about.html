@@ -14,11 +14,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="icon" type="image/png" href="images/icon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
 <header class="header shadow-sm">
     <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
@@ -26,27 +28,34 @@
             <img class="logo-img me-2" src="images/icon.png" alt="Logo">
             <span class="logo-text fw-bold">Astana Guide</span>
         </a>
-        <nav class="nav">
-            <ul class="nav list-unstyled d-flex mb-0">
+        <nav class="nav d-flex align-items-center">
+            <ul class="nav list-unstyled d-flex mb-0 me-3">
                 <li><a href="index.html" class="nav-link px-3">Home</a></li>
                 <li><a href="sights.html" class="nav-link px-3">Sights</a></li>
                 <li><a href="events.html" class="nav-link px-3">Events</a></li>
                 <li><a href="about.html" class="nav-link active px-3">About Us</a></li>
             </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </div>
 </header>
 
-<section id="about" class="about py-5">
+<section id="about" class="about py-5 flex-grow-1">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-center">
-                <img src="images/index_images/AstanaCity.jpg" alt="Astana city" class="img-fluid rounded shadow">
+                <img src="images/index_images/AstanaCity.jpg" alt="Astana city"
+                     class="img-fluid rounded shadow about-image">
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="about-text">
                     <h2>Local Events & Sights Guide</h2>
-                    <p>Astana is a city where futuristic skyscrapers meet rich cultural traditions. Here you can explore unique architecture like Bayterek Tower and Khan Shatyr, enjoy local festivals, concerts, and sports events. This guide will help you find the best places to see and the most exciting things to do in the capital of Kazakhstan.</p>
+                    <p>Astana is a city where futuristic skyscrapers meet rich cultural traditions. Here you can explore
+                        unique architecture like Bayterek Tower and Khan Shatyr, enjoy local festivals, concerts, and
+                        sports events. This guide will help you find the best places to see and the most exciting things
+                        to do in the capital of Kazakhstan.</p>
                 </div>
             </div>
         </div>
@@ -56,7 +65,7 @@
 <footer class="footer mt-auto">
     <div class="container text-center">
         <p>© 2025 Astana Guide. All Rights Reserved.
-        © by Vyacheslav Yakupov.</p>
+            © by Vyacheslav Yakupov.</p>
         <div class="footer-contacts">
             <a href="contact.html">Contact Us</a>
         </div>
@@ -64,5 +73,48 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const body = document.body;
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
+
+            if (body.classList.contains('dark-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        const aboutImage = document.querySelector('.about-image');
+        const aboutText = document.querySelector('.about-text');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {threshold: 0.2});
+
+        if (aboutImage) observer.observe(aboutImage);
+        if (aboutText) observer.observe(aboutText);
+    });
+</script>
 </body>
 </html>

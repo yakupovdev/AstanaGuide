@@ -14,17 +14,103 @@ body {
     min-height: 100vh;
     background: #eef3f7;
     color: #333;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-theme {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .about {
+    background: #1a1a1a;
+}
+
+.about {
+    transition: background-color 0.4s ease;
+}
+
+.about-image {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-image.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-text {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-text.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-text h2 {
     margin-bottom: 20px;
     font-size: 30px;
     color: #006699;
+    transition: color 0.4s ease;
+}
+
+body.dark-theme .about-text h2 {
+    color: #63b3ed;
 }
 
 .about-text p {
     font-size: 18px;
     line-height: 1.7;
+    transition: color 0.4s ease;
+}
+
+body.dark-theme .about-text p {
+    color: #d0d0d0;
+}
+
+.about-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+body.dark-theme .theme-toggle-btn {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+}
+
+.theme-toggle-btn:hover {
+    background: #63b3ed;
+    border-color: #63b3ed;
+    color: #fff;
+    transform: rotate(20deg);
+}
+
+.theme-toggle-btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -34,5 +120,25 @@ body {
 
     .about-text p {
         font-size: 16px;
+    }
+
+    .theme-toggle-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .theme-toggle-btn i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .theme-toggle-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .theme-toggle-btn i {
+        font-size: 14px;
     }
 }

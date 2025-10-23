@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="styles/header_style.css">
     <link rel="stylesheet" href="styles/footer_style.css">
     <link rel="stylesheet" href="styles/events_style.css">
@@ -30,13 +32,16 @@
             <img class="logo-img me-2" src="images/icon.png" alt="Logo">
             <span class="logo-text fw-bold">Astana Guide</span>
         </a>
-        <nav class="nav">
-            <ul class="nav list-unstyled d-flex mb-0">
+        <nav class="nav d-flex align-items-center">
+            <ul class="nav list-unstyled d-flex mb-0 me-3">
                 <li><a href="index.html" class="nav-link px-3">Home</a></li>
                 <li><a href="sights.html" class="nav-link px-3">Sights</a></li>
                 <li><a href="events.html" class="nav-link active px-3">Events</a></li>
                 <li><a href="about.html" class="nav-link px-3">About Us</a></li>
             </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </div>
 </header>
@@ -47,7 +52,8 @@
     <div class="row justify-content-center">
         <div class="col-lg-10 col-md-12">
             <div class="sight-view">
-                <div id="besbayev" class="sight-content active" data-event-id="besbayev" data-date="2025-11-06T19:30:00" data-title="Meirambek Besbayev &amp; Abdizhappar Alkozha" data-date-text="6 ноября 2025 · 19:30">
+                <div id="besbayev" class="sight-content active" data-event-id="besbayev" data-date="2025-11-06T19:30:00"
+                     data-title="Meirambek Besbayev &amp; Abdizhappar Alkozha" data-date-text="6 ноября 2025 · 19:30">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
@@ -61,7 +67,8 @@
                     </p>
                 </div>
 
-                <div id="kvashonkin" class="sight-content" data-event-id="kvashonkin" data-date="2025-10-29T19:30:00" data-title="Aleksey Kvashonkin Stand-up" data-date-text="29 октября 2025 · 19:30">
+                <div id="kvashonkin" class="sight-content" data-event-id="kvashonkin" data-date="2025-10-29T19:30:00"
+                     data-title="Aleksey Kvashonkin Stand-up" data-date-text="29 октября 2025 · 19:30">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
@@ -73,7 +80,9 @@
                     <p>A rising Russian stand-up comedian known for sharp humor and witty takes on everyday life. A
                         night full of laughter and clever observations.</p>
                 </div>
-                <div id="kaz-liechtenstein" class="sight-content" data-event-id="kaz-liechtenstein" data-date="2025-10-10T19:00:00" data-title="Kazakhstan vs Liechtenstein" data-date-text="10 октября 2025">
+                <div id="kaz-liechtenstein" class="sight-content" data-event-id="kaz-liechtenstein"
+                     data-date="2025-10-10T19:00:00" data-title="Kazakhstan vs Liechtenstein"
+                     data-date-text="10 октября 2025">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
@@ -86,7 +95,8 @@
                         stadium energy and support the squad in this pivotal game.</p>
                 </div>
 
-                <div id="kaz-belgium" class="sight-content" data-event-id="kaz-belgium" data-date="2025-10-13T19:00:00" data-title="Kazakhstan vs Belgium" data-date-text="13 октября 2025">
+                <div id="kaz-belgium" class="sight-content" data-event-id="kaz-belgium" data-date="2025-10-13T19:00:00"
+                     data-title="Kazakhstan vs Belgium" data-date-text="13 октября 2025">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
@@ -99,7 +109,8 @@
                         stands at Astana Arena.</p>
                 </div>
 
-                <div id="rasmus" class="sight-content" data-event-id="rasmus" data-date="2025-10-31T19:00:00" data-title="The Rasmus — Live" data-date-text="31 октября 2025">
+                <div id="rasmus" class="sight-content" data-event-id="rasmus" data-date="2025-10-31T19:00:00"
+                     data-title="The Rasmus — Live" data-date-text="31 октября 2025">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
@@ -111,7 +122,8 @@
                         live performance.</p>
                 </div>
 
-                <div id="vanzo" class="sight-content" data-event-id="vanzo" data-date="2025-11-22T19:00:00" data-title="Andrea Vanzo — Piano Concert" data-date-text="22 ноября 2025">
+                <div id="vanzo" class="sight-content" data-event-id="vanzo" data-date="2025-11-22T19:00:00"
+                     data-title="Andrea Vanzo — Piano Concert" data-date-text="22 ноября 2025">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
@@ -124,40 +136,45 @@
                         pieces.</p>
                 </div>
 
-                <div id="autumn-melodies" class="sight-content" data-event-id="autumn-melodies" data-date="2025-10-01T12:00:00" data-title="&quot;Kuzgi Auen&quot; — Astana Opera" data-date-text="Осень 2025">
+                <div id="autumn-melodies" class="sight-content" data-event-id="autumn-melodies"
+                     data-date="2025-10-01T12:00:00" data-title="&quot;Kuzgi Auen&quot; — Astana Opera"
+                     data-date-text="Осень 2025">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
                     </div>
                     <img src="images/events_images/kuzgi_auen.jpg"
                          alt="Autumn Melodies" class="img-fluid">
-                    <h3>“Kuzgi Auen” — Astana Opera</h3>
+                    <h3>"Kuzgi Auen" — Astana Opera</h3>
                     <span>📅 Autumn 2025</span>
                     <p>A seasonal opera and ballet program celebrating the colors of autumn with immersive staging and
                         orchestral highlights.</p>
                 </div>
 
-                <div id="schaherezada" class="sight-content" data-event-id="schaherezada" data-date="2025-10-20T19:00:00" data-title="&quot;Schaherezada&quot; — Astana Opera" data-date-text="20 октября 2025 · 19:00">
+                <div id="schaherezada" class="sight-content" data-event-id="schaherezada"
+                     data-date="2025-10-20T19:00:00" data-title="&quot;Schaherezada&quot; — Astana Opera"
+                     data-date-text="20 октября 2025 · 19:00">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
                     </div>
                     <img src="images/events_images/scheherazade.png"
                          alt="Schaherezada Ballet" class="img-fluid">
-                    <h3>“Schaherezada” — Astana Opera</h3>
+                    <h3>"Schaherezada" — Astana Opera</h3>
                     <span>📅 October 20, 2025 — 19:00</span>
-                    <p>An opulent ballet inspired by “One Thousand and One Nights,” filled with vibrant choreography and
-                        Rimsky-Korsakov’s music.</p>
+                    <p>An opulent ballet inspired by "One Thousand and One Nights," filled with vibrant choreography and
+                        Rimsky-Korsakov's music.</p>
                 </div>
 
-                <div id="touch-light" class="sight-content" data-event-id="touch-light" data-date="2025-11-01T19:00:00" data-title="&quot;Touch the Light&quot; — Astana Ballet" data-date-text="1 ноября 2025">
+                <div id="touch-light" class="sight-content" data-event-id="touch-light" data-date="2025-11-01T19:00:00"
+                     data-title="&quot;Touch the Light&quot; — Astana Ballet" data-date-text="1 ноября 2025">
                     <div class="event-actions">
                         <button type="button" class="planner-btn" data-value="wish">Want to visit</button>
                         <button type="button" class="planner-btn" data-value="done">Visited</button>
                     </div>
                     <img src="images/events_images/touch_the_light.png"
                          alt="Touch the Light" class="img-fluid">
-                    <h3>“Touch the Light” — Astana Ballet</h3>
+                    <h3>"Touch the Light" — Astana Ballet</h3>
                     <span>📅 November 1, 2025</span>
                     <p>Astana Ballet explores light and emotion through contemporary choreography and multimedia
                         staging.</p>
@@ -223,7 +240,8 @@
         <div class="col-lg-8 col-md-10">
             <div class="planner-summary">
                 <h2 class="text-center">Planned to visit</h2>
-                <p class="planner-summary-empty text-center">Select &quot;Want to visit&quot; on an event and it will appear here.</p>
+                <p class="planner-summary-empty text-center">Select &quot;Want to visit&quot; on an event and it will
+                    appear here.</p>
                 <div class="planner-summary-list"></div>
             </div>
         </div>
@@ -245,10 +263,37 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const body = document.body;
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
+
+            if (body.classList.contains('dark-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    });
+
     const scrollItems = document.querySelectorAll('.scroll-item');
     const sightContents = document.querySelectorAll('.sight-content');
 
-    function showSight(targetId) {
+    function showSight(targetId, preventScroll = false) {
         sightContents.forEach(content => {
             content.classList.remove('active');
         });
@@ -265,7 +310,9 @@
         const activeItem = document.querySelector(`[data-target="${targetId}"]`);
         if (activeItem) {
             activeItem.classList.add('active');
-            activeItem.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+            if (!preventScroll) {
+                activeItem.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+            }
         }
     }
 
@@ -283,16 +330,16 @@
     document.addEventListener('DOMContentLoaded', function () {
         const hash = window.location.hash.substring(1);
         if (hash && document.getElementById(hash)) {
-            showSight(hash);
+            showSight(hash, true);
         } else {
-            showSight('besbayev');
+            showSight('besbayev', true);
         }
     });
 
     window.addEventListener('hashchange', function () {
         const hash = window.location.hash.substring(1);
         if (hash && document.getElementById(hash)) {
-            showSight(hash);
+            showSight(hash, true);
         }
     });
 

@@ -3,13 +3,29 @@
     color: #fff;
     padding: 15px 0;
     font-size: 18px;
+    transition: background-color 0.4s ease;
+}
+
+body.dark-theme .footer {
+    background: #1a1a1a;
+    border-top: 1px solid #333;
 }
 
 .footer-contacts a {
     color: #18cffc;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .footer-contacts a {
+    color: #63b3ed;
 }
 
 .footer-contacts a:hover {
     text-decoration: underline;
+    color: #63b3ed;
+}
+
+body.dark-theme .footer-contacts a:hover {
+    color: #8dc9f5;
 }

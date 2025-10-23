@@ -1,286 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AG Sights</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/header_style.css">
-  <link rel="stylesheet" href="styles/footer_style.css">
-  <link rel="stylesheet" href="styles/sights_style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  
-  <link rel="icon" type="image/png" href="images/icon.png">
+    <meta charset="UTF-8"/>
+    <title>AG Sights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/header_style.css">
+    <link rel="stylesheet" href="styles/footer_style.css">
+    <link rel="stylesheet" href="styles/sights_style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 <body>
 <header class="header shadow-sm">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
-    <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
-      <img class="logo-img me-2" src="images/icon.png" alt="Logo">
-      <span class="logo-text fw-bold">Astana Guide</span>
-    </a>
-    <nav class="nav">
-      <ul class="nav list-unstyled d-flex mb-0">
-        <li><a href="index.html" class="nav-link px-3">Home</a></li>
-        <li><a href="sights.html" class="nav-link active px-3">Sights</a></li>
-        <li><a href="events.html" class="nav-link px-3">Events</a></li>
-        <li><a href="about.html" class="nav-link px-3">About Us</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
+        <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+            <img class="logo-img me-2" src="images/icon.png" alt="Logo">
+            <span class="logo-text fw-bold">Astana Guide</span>
+        </a>
+        <nav class="nav d-flex align-items-center">
+            <ul class="nav list-unstyled d-flex mb-0 me-3">
+                <li><a href="index.html" class="nav-link px-3">Home</a></li>
+                <li><a href="sights.html" class="nav-link active px-3">Sights</a></li>
+                <li><a href="events.html" class="nav-link px-3">Events</a></li>
+                <li><a href="about.html" class="nav-link px-3">About Us</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </div>
 </header>
 
 <section class="scroll-section container mt-4">
-  <h2 class="text-center">Popular Sights</h2>
-  <div class="row justify-content-center">
-    <div class="col-lg-10 col-md-12">
-      <div class="sight-view">
-        <div id="bayterek" class="sight-content active" data-lat="51.128212" data-lng="71.430411" data-zoom="16">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/sights_baiterek.jpg" alt="Bayterek Tower" class="img-fluid">
-            <h3>Bayterek Tower</h3>
-            <p>Bayterek is the main attraction and symbol of Astana, reflecting the ideas of independence and development of Kazakhstan. The tower rises to a height of 97 meters, symbolizing the year when the capital was moved to Astana. At the top, there is an observation deck with a panoramic view of the entire city.</p>
-          </div>
-          <div class="sight-map" id="map-bayterek"></div>
-        </div>
+    <h2 class="text-center">Popular Sights</h2>
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+            <div class="sight-view">
+                <div id="bayterek" class="sight-content active" data-lat="51.128212" data-lng="71.430411"
+                     data-zoom="16">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/sights_baiterek.jpg" alt="Bayterek Tower" class="img-fluid">
+                        <h3>Bayterek Tower</h3>
+                        <p>Bayterek is the main attraction and symbol of Astana, reflecting the ideas of independence
+                            and development of Kazakhstan. The tower rises to a height of 97 meters, symbolizing the
+                            year when the capital was moved to Astana. At the top, there is an observation deck with a
+                            panoramic view of the entire city.</p>
+                    </div>
+                    <div class="sight-map" id="map-bayterek"></div>
+                </div>
 
-        <div id="khan-shatyr" class="sight-content" data-lat="51.132316" data-lng="71.403626" data-zoom="16">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/sights_khan_shatyr1.jpg" alt="Khan Shatyr" class="img-fluid">
-            <h3>Khan Shatyr</h3>
-            <p>Khan Shatyr is one of the most recognizable symbols of modern Astana and the world's largest tent, designed by renowned architect Norman Foster. Inside Khan Shatyr is a shopping and entertainment center with dozens of shops, restaurants, cinemas, and recreation areas.</p>
-          </div>
-          <div class="sight-map" id="map-khan-shatyr"></div>
-        </div>
+                <div id="khan-shatyr" class="sight-content" data-lat="51.132316" data-lng="71.403626" data-zoom="16">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/sights_khan_shatyr1.jpg" alt="Khan Shatyr" class="img-fluid">
+                        <h3>Khan Shatyr</h3>
+                        <p>Khan Shatyr is one of the most recognizable symbols of modern Astana and the world's largest
+                            tent, designed by renowned architect Norman Foster. Inside Khan Shatyr is a shopping and
+                            entertainment center with dozens of shops, restaurants, cinemas, and recreation areas.</p>
+                    </div>
+                    <div class="sight-map" id="map-khan-shatyr"></div>
+                </div>
 
-        <div id="hazret-sultan" class="sight-content" data-lat="51.1258" data-lng="71.47241" data-zoom="16">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/hazrat_sultan_mosque.png" alt="Hazret Sultan Mosque" class="img-fluid">
-            <h3>Hazret Sultan Mosque</h3>
-            <p>The Hazret Sultan Mosque is one of the largest mosques in Central Asia and a magnificent example of modern Islamic architecture. The mosque can accommodate up to 10,000 worshippers and features beautiful traditional Islamic design elements combined with contemporary architectural solutions.</p>
-          </div>
-          <div class="sight-map" id="map-hazret-sultan"></div>
-        </div>
+                <div id="hazret-sultan" class="sight-content" data-lat="51.1258" data-lng="71.47241" data-zoom="16">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/hazrat_sultan_mosque.png" alt="Hazret Sultan Mosque"
+                             class="img-fluid">
+                        <h3>Hazret Sultan Mosque</h3>
+                        <p>The Hazret Sultan Mosque is one of the largest mosques in Central Asia and a magnificent
+                            example of modern Islamic architecture. The mosque can accommodate up to 10,000 worshippers
+                            and features beautiful traditional Islamic design elements combined with contemporary
+                            architectural solutions.</p>
+                    </div>
+                    <div class="sight-map" id="map-hazret-sultan"></div>
+                </div>
 
-        <div id="akorda" class="sight-content" data-lat="51.12609" data-lng="71.44634" data-zoom="16">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/ak_orda.png" alt="Akorda Palace" class="img-fluid">
-            <h3>Akorda Palace</h3>
-            <p>The Akorda Presidential Palace is the official workplace of the President of Kazakhstan. This impressive building with its distinctive blue dome is one of the most recognizable symbols of the capital, representing the state power and sovereignty of Kazakhstan.</p>
-          </div>
-          <div class="sight-map" id="map-akorda"></div>
-        </div>
+                <div id="akorda" class="sight-content" data-lat="51.12609" data-lng="71.44634" data-zoom="16">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/ak_orda.png" alt="Akorda Palace" class="img-fluid">
+                        <h3>Akorda Palace</h3>
+                        <p>The Akorda Presidential Palace is the official workplace of the President of Kazakhstan. This
+                            impressive building with its distinctive blue dome is one of the most recognizable symbols
+                            of the capital, representing the state power and sovereignty of Kazakhstan.</p>
+                    </div>
+                    <div class="sight-map" id="map-akorda"></div>
+                </div>
 
-        <div id="nur-astana" class="sight-content" data-lat="51.0728" data-lng="71.40974" data-zoom="16">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/nur_astana_mosque.png" alt="Nur-Astana Mosque" class="img-fluid">
-            <h3>Nur-Astana Mosque</h3>
-            <p>The Nur-Astana Mosque is another significant religious landmark in Astana, known for its elegant architecture and peaceful atmosphere. The mosque serves as an important spiritual center for the Muslim community and showcases beautiful traditional Islamic architectural elements.</p>
-          </div>
-          <div class="sight-map" id="map-nur-astana"></div>
-        </div>
+                <div id="nur-astana" class="sight-content" data-lat="51.0728" data-lng="71.40974" data-zoom="16">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/nur_astana_mosque.png" alt="Nur-Astana Mosque" class="img-fluid">
+                        <h3>Nur-Astana Mosque</h3>
+                        <p>The Nur-Astana Mosque is another significant religious landmark in Astana, known for its
+                            elegant architecture and peaceful atmosphere. The mosque serves as an important spiritual
+                            center for the Muslim community and showcases beautiful traditional Islamic architectural
+                            elements.</p>
+                    </div>
+                    <div class="sight-map" id="map-nur-astana"></div>
+                </div>
 
-        <div id="expo" class="sight-content" data-lat="51.08947" data-lng="71.41595" data-zoom="15">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/expo.jpg" alt="Expo2017" class="img-fluid">
-            <h3>Expo 2017</h3>
-            <p>Expo 2017 was a major international exhibition held in Astana, dedicated to the theme “Future Energy.” Its centerpiece, the Nur Alem pavilion, is the world’s largest spherical building and has become one of the city’s most iconic landmarks. Today, the area serves as a cultural, scientific, and business hub with museums, exhibitions, and modern architecture.</p>
-          </div>
-          <div class="sight-map" id="map-expo"></div>
-        </div>
+                <div id="expo" class="sight-content" data-lat="51.08947" data-lng="71.41595" data-zoom="15">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/expo.jpg" alt="Expo2017" class="img-fluid">
+                        <h3>Expo 2017</h3>
+                        <p>Expo 2017 was a major international exhibition held in Astana, dedicated to the theme "Future
+                            Energy." Its centerpiece, the Nur Alem pavilion, is the world's largest spherical building
+                            and has become one of the city's most iconic landmarks. Today, the area serves as a
+                            cultural, scientific, and business hub with museums, exhibitions, and modern
+                            architecture.</p>
+                    </div>
+                    <div class="sight-map" id="map-expo"></div>
+                </div>
 
-        <div id="square" class="sight-content" data-lat="51.12213" data-lng="71.46986" data-zoom="15">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/independence_square.jpg" alt="Independence Square" class="img-fluid">
-            <h3>Independence Square</h3>
-            <p>Independence Square is one of the largest squares in Astana and a significant cultural and ceremonial space. It hosts national celebrations, military parades, and major public events. The square is surrounded by important landmarks such as the Palace of Independence, the National Museum, and the grand Hazrat Sultan Mosque.</p>
-          </div>
-          <div class="sight-map" id="map-square"></div>
-        </div>
+                <div id="square" class="sight-content" data-lat="51.12213" data-lng="71.46986" data-zoom="15">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/independence_square.jpg" alt="Independence Square"
+                             class="img-fluid">
+                        <h3>Independence Square</h3>
+                        <p>Independence Square is one of the largest squares in Astana and a significant cultural and
+                            ceremonial space. It hosts national celebrations, military parades, and major public events.
+                            The square is surrounded by important landmarks such as the Palace of Independence, the
+                            National Museum, and the grand Hazrat Sultan Mosque.</p>
+                    </div>
+                    <div class="sight-map" id="map-square"></div>
+                </div>
 
-        <div id="park" class="sight-content" data-lat="51.15557" data-lng="71.41798" data-zoom="15">
-          <div class="sight-tabs">
-            <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png" class="icon">Info</button>
-            <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map</button>
-          </div>
-          <div class="sight-info active">
-            <img src="images/sights_images/central_park_astana.webp" alt="Astana Central Park" class="img-fluid">
-            <h3>Astana Central Park</h3>
-            <p>Astana Central Park is a green oasis in the heart of the city, popular among locals and visitors alike. It offers walking paths, lakes, playgrounds, and amusement rides, making it a favorite spot for families and outdoor activities. The park provides a relaxing escape from the modern urban landscape of the capital.</p>
-          </div>
-          <div class="sight-map" id="map-park"></div>
+                <div id="park" class="sight-content" data-lat="51.15557" data-lng="71.41798" data-zoom="15">
+                    <div class="sight-tabs">
+                        <button class="sight-tab active" data-view="info"><img src="images/sights_images/info.png"
+                                                                               class="icon">Info
+                        </button>
+                        <button class="sight-tab" data-view="map"><img src="images/sights_images/map.png" class="icon">Map
+                        </button>
+                    </div>
+                    <div class="sight-info active">
+                        <img src="images/sights_images/central_park_astana.webp" alt="Astana Central Park"
+                             class="img-fluid">
+                        <h3>Astana Central Park</h3>
+                        <p>Astana Central Park is a green oasis in the heart of the city, popular among locals and
+                            visitors alike. It offers walking paths, lakes, playgrounds, and amusement rides, making it
+                            a favorite spot for families and outdoor activities. The park provides a relaxing escape
+                            from the modern urban landscape of the capital.</p>
+                    </div>
+                    <div class="sight-map" id="map-park"></div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <div class="row mt-4">
-    <div class="col-12">
-      <div class="scroll-container">
-        <div class="scroll-item active" data-target="bayterek">
-          <img src="images/sights_images/sights_baiterek.jpg" alt="Bayterek Tower">
-          <p>Bayterek Tower</p>
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="scroll-container">
+                <div class="scroll-item active" data-target="bayterek">
+                    <img src="images/sights_images/sights_baiterek.jpg" alt="Bayterek Tower">
+                    <p>Bayterek Tower</p>
+                </div>
+                <div class="scroll-item" data-target="khan-shatyr">
+                    <img src="images/sights_images/sights_khan_shatyr1.jpg" alt="Khan Shatyr">
+                    <p>Khan Shatyr</p>
+                </div>
+                <div class="scroll-item" data-target="hazret-sultan">
+                    <img src="images/sights_images/hazrat_sultan_mosque.png" alt="Hazret Sultan Mosque">
+                    <p>Hazret Sultan Mosque</p>
+                </div>
+                <div class="scroll-item" data-target="akorda">
+                    <img src="images/sights_images/ak_orda.png" alt="Akorda Palace">
+                    <p>Akorda Palace</p>
+                </div>
+                <div class="scroll-item" data-target="nur-astana">
+                    <img src="images/sights_images/nur_astana_mosque.png" alt="Nur-Astana Mosque">
+                    <p>Nur-Astana Mosque</p>
+                </div>
+                <div class="scroll-item" data-target="expo">
+                    <img src="images/sights_images/expo.jpg" alt="Expo 2017">
+                    <p>Expo 2017</p>
+                </div>
+                <div class="scroll-item" data-target="square">
+                    <img src="images/sights_images/independence_square.jpg" alt="Independence Square">
+                    <p>Independence Square</p>
+                </div>
+                <div class="scroll-item" data-target="park">
+                    <img src="images/sights_images/central_park_astana.webp" alt="Astana Central Park">
+                    <p>Astana Central Park</p>
+                </div>
+            </div>
         </div>
-        <div class="scroll-item" data-target="khan-shatyr">
-          <img src="images/sights_images/sights_khan_shatyr1.jpg" alt="Khan Shatyr">
-          <p>Khan Shatyr</p>
-        </div>
-        <div class="scroll-item" data-target="hazret-sultan">
-          <img src="images/sights_images/hazrat_sultan_mosque.png" alt="Hazret Sultan Mosque">
-          <p>Hazret Sultan Mosque</p>
-        </div>
-        <div class="scroll-item" data-target="akorda">
-          <img src="images/sights_images/ak_orda.png" alt="Akorda Palace">
-          <p>Akorda Palace</p>
-        </div>
-        <div class="scroll-item" data-target="nur-astana">
-          <img src="images/sights_images/nur_astana_mosque.png" alt="Nur-Astana Mosque">
-          <p>Nur-Astana Mosque</p>
-        </div>
-        <div class="scroll-item" data-target="expo">
-          <img src="images/sights_images/expo.jpg" alt="Expo 2017">
-          <p>Expo 2017</p>
-        </div>
-        <div class="scroll-item" data-target="square">
-          <img src="images/sights_images/independence_square.jpg" alt="Independence Square">
-          <p>Independence Square</p>
-        </div>
-        <div class="scroll-item" data-target="park">
-          <img src="images/sights_images/central_park_astana.webp" alt="Astana Central Park">
-          <p>Astana Central Park</p>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <footer class="footer mt-auto">
-  <div class="container text-center">
-    <p>© 2025 Astana Guide. All Rights Reserved.
-        © by Marlen Zhumagulov
-    </p>
-    <div class="footer-contacts">
-      <a href="contact.html">Contact Us</a>
+    <div class="container text-center">
+        <p>© 2025 Astana Guide. All Rights Reserved.
+            © by Marlen Zhumagulov
+        </p>
+        <div class="footer-contacts">
+            <a href="contact.html">Contact Us</a>
+        </div>
     </div>
-  </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-  const scrollItems=document.querySelectorAll('.scroll-item');
-  const sightContents=document.querySelectorAll('.sight-content');
-  const mapInstances={};
+    document.addEventListener('DOMContentLoaded', function () {
+        const body = document.body;
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
 
-  function ensureMap(mapId,lat,lng,zoom){
-    if(mapInstances[mapId]){
-      setTimeout(()=>mapInstances[mapId].invalidateSize(),200);
-      return;
-    }
-    const map=L.map(mapId).setView([lat,lng],zoom);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-      attribution:'&copy; OpenStreetMap contributors',
-      maxZoom:19
-    }).addTo(map);
-    L.marker([lat,lng]).addTo(map);
-    mapInstances[mapId]=map;
-    setTimeout(()=>map.invalidateSize(),250);
-  }
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
 
-  function setActiveView(content,view){
-    const tabs=content.querySelectorAll('.sight-tab');
-    const info=content.querySelector('.sight-info');
-    const map=content.querySelector('.sight-map');
-    tabs.forEach(tab=>tab.classList.toggle('active',tab.dataset.view===view));
-    if(view==='info'){
-      info.classList.add('active');
-      map.classList.remove('active');
-      return;
-    }
-    info.classList.remove('active');
-    map.classList.add('active');
-    const mapId=map.id;
-    const lat=parseFloat(content.dataset.lat);
-    const lng=parseFloat(content.dataset.lng);
-    const zoom=parseInt(content.dataset.zoom||'15',10);
-    ensureMap(mapId,lat,lng,zoom);
-  }
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
 
-  function showSight(targetId){
-    sightContents.forEach(c=>c.classList.remove('active'));
-    scrollItems.forEach(i=>i.classList.remove('active'));
-    const targetContent=document.getElementById(targetId);
-    if(targetContent){
-      targetContent.classList.add('active');
-      setActiveView(targetContent,'info');
-    }
-    const activeItem=document.querySelector(`[data-target="${targetId}"]`);
-    if(activeItem){
-      activeItem.classList.add('active');
-      activeItem.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-    }
-  }
-
-  document.querySelectorAll('.sight-tab').forEach(tab=>{
-    tab.addEventListener('click',function(e){
-      e.preventDefault();
-      const content=this.closest('.sight-content');
-      const view=this.dataset.view;
-      if(content) setActiveView(content,view);
+            if (body.classList.contains('dark-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
     });
-  });
 
-  scrollItems.forEach(item=>{
-    item.addEventListener('click',function(e){
-      e.preventDefault();
-      const targetId=this.getAttribute('data-target');
-      const scrollPos=window.scrollY;
-      showSight(targetId);
-      history.pushState(null,'','#'+targetId);
-      window.scrollTo(0,scrollPos);
+    const scrollItems = document.querySelectorAll('.scroll-item');
+    const sightContents = document.querySelectorAll('.sight-content');
+    const mapInstances = {};
+
+    function ensureMap(mapId, lat, lng, zoom) {
+        if (mapInstances[mapId]) {
+            setTimeout(() => mapInstances[mapId].invalidateSize(), 200);
+            return;
+        }
+        const map = L.map(mapId).setView([lat, lng], zoom);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 19
+        }).addTo(map);
+        L.marker([lat, lng]).addTo(map);
+        mapInstances[mapId] = map;
+        setTimeout(() => map.invalidateSize(), 250);
+    }
+
+    function setActiveView(content, view) {
+        const tabs = content.querySelectorAll('.sight-tab');
+        const info = content.querySelector('.sight-info');
+        const map = content.querySelector('.sight-map');
+        tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.view === view));
+        if (view === 'info') {
+            info.classList.add('active');
+            map.classList.remove('active');
+            return;
+        }
+        info.classList.remove('active');
+        map.classList.add('active');
+        const mapId = map.id;
+        const lat = parseFloat(content.dataset.lat);
+        const lng = parseFloat(content.dataset.lng);
+        const zoom = parseInt(content.dataset.zoom || '15', 10);
+        ensureMap(mapId, lat, lng, zoom);
+    }
+
+    function showSight(targetId, preventScroll = false) {
+        sightContents.forEach(c => c.classList.remove('active'));
+        scrollItems.forEach(i => i.classList.remove('active'));
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+            targetContent.classList.add('active');
+            setActiveView(targetContent, 'info');
+        }
+        const activeItem = document.querySelector(`[data-target="${targetId}"]`);
+        if (activeItem) {
+            activeItem.classList.add('active');
+            if (!preventScroll) {
+                activeItem.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+            }
+        }
+    }
+
+    document.querySelectorAll('.sight-tab').forEach(tab => {
+        tab.addEventListener('click', function (e) {
+            e.preventDefault();
+            const content = this.closest('.sight-content');
+            const view = this.dataset.view;
+            if (content) setActiveView(content, view);
+        });
     });
-  });
 
-  document.addEventListener('DOMContentLoaded',function(){
-    const hash=window.location.hash.substring(1);
-    if(hash&&document.getElementById(hash)) showSight(hash); else showSight('bayterek');
-  });
+    scrollItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-target');
+            const scrollPos = window.scrollY;
+            showSight(targetId);
+            history.pushState(null, '', '#' + targetId);
+            window.scrollTo(0, scrollPos);
+        });
+    });
 
-  window.addEventListener('hashchange',function(){
-    const hash=window.location.hash.substring(1);
-    if(hash&&document.getElementById(hash)) showSight(hash);
-  });
+    document.addEventListener('DOMContentLoaded', function () {
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(hash)) {
+            showSight(hash, true);
+        } else {
+            showSight('bayterek', true);
+        }
+    });
+
+    window.addEventListener('hashchange', function () {
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(hash)) showSight(hash, true);
+    });
 </script>
 </body>
 </html>

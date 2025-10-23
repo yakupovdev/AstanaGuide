@@ -8,11 +8,91 @@
     font-style: normal;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: #fff;
     color: #333;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/index_images/index_hero.png") no-repeat center/cover;
+}
+
+body.dark-theme .cards-section {
+    background: #1a1a1a;
+}
+
+body.dark-theme .scroll-section {
+    background: #1a1a1a;
+}
+
+body.dark-theme .scroll-section h2 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .scroll-item {
+    background: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .scroll-item span {
+    color: #999;
+}
+
+body.dark-theme .scroll-btn {
+    background: rgba(42, 42, 42, 0.95);
+    color: #e0e0e0;
+}
+
+body.dark-theme .scroll-btn:hover {
+    background: #63b3ed;
+    color: #fff;
+}
+
+body.dark-theme .card-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+body.dark-theme .theme-toggle-btn {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+}
+
+.theme-toggle-btn:hover {
+    background: #63b3ed;
+    border-color: #63b3ed;
+    color: #fff;
+    transform: rotate(20deg);
+}
+
+.theme-toggle-btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
 }
 
 .hero {
@@ -24,7 +104,7 @@ body {
     height: 92vh;
     background: url("../images/index_images/index_hero.png") no-repeat center/cover;
     text-align: center;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .hero h1 {
@@ -34,6 +114,18 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #63b3ed 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .scroll-down {
@@ -48,14 +140,19 @@ body {
 }
 
 @keyframes bounce {
-    0%,100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 .cards-section {
     padding: 60px 0;
     background: #fff;
     text-align: center;
+    transition: background-color 0.4s ease;
 }
 
 .cards-header h2 {
@@ -64,6 +161,16 @@ body {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     margin-bottom: 40px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .card {
@@ -71,8 +178,21 @@ body {
     min-height: 480px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card.card-visible {
+    animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card img {
@@ -92,12 +212,20 @@ body {
     left: 0;
     width: 100%;
     padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     color: #fff;
     z-index: 1;
+    transition: background 0.4s ease;
 }
 
-.card:hover img { transform: scale(1.08); }
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
 
 .card-btn {
     display: inline-block;
@@ -120,6 +248,7 @@ body {
     padding: 50px 0;
     background: #fff;
     position: relative;
+    transition: background-color 0.4s ease;
 }
 
 .scroll-section h2 {
@@ -128,6 +257,7 @@ body {
     font-family: "Oswald", sans-serif;
     color: #222;
     margin-bottom: 20px;
+    transition: color 0.4s ease;
 }
 
 .scroll-container {
@@ -139,15 +269,16 @@ body {
     padding: 1rem 2rem 40px;
 }
 
-.scroll-container::-webkit-scrollbar { display: none; }
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
 
-/* Универсальный стиль карточек (в т.ч. Popular Events) */
 .scroll-item {
     flex: 0 0 auto;
     width: 240px;
     border-radius: 15px;
     background: #f9f9f9;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     text-decoration: none;
     color: #000;
@@ -156,7 +287,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease, background-color 0.4s ease, color 0.4s ease;
 }
 
 .scroll-item.visible {
@@ -166,18 +297,21 @@ body {
 
 .scroll-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Адаптивная высота для изображений */
 .scroll-item img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* можно поменять на 4/3 при желании */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
 }
 
-/* Текст и дата снизу занимают естественную высоту */
+.scroll-item:hover img {
+    transform: scale(1.05);
+}
+
 .scroll-item p {
     font-size: 15px;
     font-weight: 600;
@@ -191,21 +325,22 @@ body {
     font-size: 13px;
     color: #777;
     margin-top: 3px;
+    transition: color 0.4s ease;
 }
 
 .scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     border: none;
     border-radius: 50%;
     width: 45px;
     height: 45px;
     font-size: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: all 0.3s ease;
     z-index: 10;
 }
 
@@ -215,18 +350,58 @@ body {
     transform: translateY(-50%) scale(1.1);
 }
 
-.scroll-btn.left { left: -10px; }
-.scroll-btn.right { right: -10px; }
+.scroll-btn.left {
+    left: -10px;
+}
+
+.scroll-btn.right {
+    right: -10px;
+}
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 60px; }
-    .card { min-height: 400px; }
-    .scroll-item { width: 200px; }
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .card {
+        min-height: 400px;
+    }
+
+    .scroll-item {
+        width: 200px;
+    }
+
+    .theme-toggle-btn {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 576px) {
-    .hero h1 { font-size: 48px; }
-    .card { min-height: 350px; }
-    .scroll-item { width: 180px; }
-    .scroll-btn { width: 35px; height: 35px; font-size: 16px; }
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .card {
+        min-height: 350px;
+    }
+
+    .scroll-item {
+        width: 180px;
+    }
+
+    .scroll-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .theme-toggle-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .theme-toggle-btn i {
+        font-size: 14px;
+    }
 }

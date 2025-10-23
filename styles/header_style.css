@@ -1,27 +1,53 @@
 .header {
     background: #FAFAFA;
+    transition: background-color 0.4s ease;
+}
+
+body.dark-theme .header {
+    background: #2a2a2a;
 }
 
 .logo-img {
     width: 35px;
     height: 35px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 .logo-text {
     color: #1f2528;
     font-size: 28px;
+    transition: color 0.4s ease;
+}
+
+body.dark-theme .logo-text {
+    color: #e0e0e0;
 }
 
 .nav-link {
     color: #1f2528;
     border-radius: 9999px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     font-weight: 500;
     text-decoration: none;
+}
+
+body.dark-theme .nav-link {
+    color: #e0e0e0;
 }
 
 .nav-link:hover,
 .nav-link.active {
     background: #1f2528;
     color: #FAFAFA !important;
+}
+
+body.dark-theme .nav-link:hover,
+body.dark-theme .nav-link.active {
+    background: #63b3ed;
+    color: #fff !important;
 }

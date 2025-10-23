@@ -14,7 +14,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -29,13 +30,16 @@
             <img class="logo-img me-2" src="images/icon.png" alt="Logo">
             <span class="logo-text fw-bold">Astana Guide</span>
         </a>
-        <nav class="nav">
-            <ul class="nav list-unstyled d-flex mb-0">
+        <nav class="nav d-flex align-items-center">
+            <ul class="nav list-unstyled d-flex mb-0 me-3">
                 <li><a href="index.html" class="nav-link active px-3">Home</a></li>
                 <li><a href="sights.html" class="nav-link px-3">Sights</a></li>
                 <li><a href="events.html" class="nav-link px-3">Events</a></li>
                 <li><a href="about.html" class="nav-link px-3">About Us</a></li>
             </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </div>
 </header>
@@ -120,7 +124,6 @@
                 <img src="images/sights_images/central_park_astana.webp" alt="Sight 7">
                 <p>Astana Central Park</p>
             </a>
-
         </div>
     </div>
 </section>
@@ -161,15 +164,15 @@
             </a>
             <a href="events.html#autumn-melodies" class="scroll-item">
                 <img src="images/events_images/kuzgi_auen.jpg" alt="Kuzgi Auen">
-                <p>“Kuzgi Auen” — Astana Opera<br><span>Fall 2025</span></p>
+                <p>"Kuzgi Auen" — Astana Opera<br><span>Fall 2025</span></p>
             </a>
             <a href="events.html#schaherezada" class="scroll-item">
                 <img src="images/events_images/scheherazade.png" alt="Schaherezada Ballet">
-                <p>“Schaherezada” — Astana Opera<br><span>Oct 20, 2025</span></p>
+                <p>"Schaherezada" — Astana Opera<br><span>Oct 20, 2025</span></p>
             </a>
             <a href="events.html#touch-light" class="scroll-item">
                 <img src="images/events_images/touch_the_light.png" alt="Touch the Light">
-                <p>“Touch the Light” — Astana Ballet<br><span>Nov 1, 2025</span></p>
+                <p>"Touch the Light" — Astana Ballet<br><span>Nov 1, 2025</span></p>
             </a>
         </div>
     </div>
@@ -185,35 +188,91 @@
     </div>
 </footer>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
 <script>
-    document.querySelectorAll('.scroll-section').forEach(section => {
-        const container = section.querySelector('.scroll-container');
-        const leftBtn = section.querySelector('.scroll-btn.left');
-        const rightBtn = section.querySelector('.scroll-btn.right');
+    $(document).ready(function () {
+        const $body = $('body');
+        const $themeToggle = $('#theme-toggle');
+        const $themeIcon = $themeToggle.find('i');
 
-        container.addEventListener('wheel', evt => {
-            evt.preventDefault();
-            container.scrollBy({left: evt.deltaY < 0 ? -150 : 150, behavior: 'smooth'});
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            $body.addClass('dark-theme');
+            $themeIcon.removeClass('fa-moon').addClass('fa-sun');
+        }
+
+        $themeToggle.on('click', function () {
+            $body.toggleClass('dark-theme');
+
+            if ($body.hasClass('dark-theme')) {
+                $themeIcon.removeClass('fa-moon').addClass('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                $themeIcon.removeClass('fa-sun').addClass('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
         });
 
-        leftBtn.addEventListener('click', () => {
-            container.scrollBy({left: -300, behavior: 'smooth'});
-        });
-        rightBtn.addEventListener('click', () => {
-            container.scrollBy({left: 300, behavior: 'smooth'});
-        });
+        $('.scroll-section').each(function () {
+            const $section = $(this);
+            const $container = $section.find('.scroll-container');
+            const $leftBtn = $section.find('.scroll-btn.left');
+            const $rightBtn = $section.find('.scroll-btn.right');
 
-        const items = container.querySelectorAll('.scroll-item');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+            $container.on('wheel', function (evt) {
+                evt.preventDefault();
+                const delta = evt.originalEvent.deltaY || evt.originalEvent.wheelDelta;
+                const scrollAmount = delta > 0 ? 200 : -200;
+
+                this.scrollLeft += scrollAmount;
             });
-        }, {threshold: 0.3});
-        items.forEach(item => observer.observe(item));
+
+            $leftBtn.on('click', function () {
+                $container.animate({
+                    scrollLeft: $container.scrollLeft() - 350
+                }, 500, 'swing');
+            });
+
+            $rightBtn.on('click', function () {
+                $container.animate({
+                    scrollLeft: $container.scrollLeft() + 350
+                }, 500, 'swing');
+            });
+
+            const items = $container.find('.scroll-item').get();
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $(entry.target).addClass('visible');
+                    }
+                });
+            }, {threshold: 0.3});
+
+            items.forEach(item => observer.observe(item));
+        });
+
+        const $cards = $('.card');
+        const cardObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    $(entry.target).addClass('card-visible');
+                }
+            });
+        }, {threshold: 0.2});
+
+        $cards.each(function () {
+            cardObserver.observe(this);
+        });
+
+        $('.scroll-down').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $('#cards').offset().top
+            }, 800);
+        });
     });
 </script>
 </body>
