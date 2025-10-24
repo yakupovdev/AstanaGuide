@@ -1,31 +1,21 @@
 .footer {
-    background: #2D2C3C;
-    color: #fff;
+    background: var(--bg-footer);
+    color: var(--text-white);
     padding: 15px 0;
     font-size: 18px;
-    transition: background-color 0.4s ease;
+    border-top: 1px solid transparent;
 }
 
-body.dark-theme .footer {
-    background: #1a1a1a;
-    border-top: 1px solid #333;
+html[data-theme="dark"] .footer {
+    border-top-color: var(--border-color);
 }
 
 .footer-contacts a {
-    color: #18cffc;
+    color: var(--accent-primary);
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-body.dark-theme .footer-contacts a {
-    color: #63b3ed;
 }
 
 .footer-contacts a:hover {
     text-decoration: underline;
-    color: #63b3ed;
-}
-
-body.dark-theme .footer-contacts a:hover {
-    color: #8dc9f5;
+    color: var(--accent-hover);
 }

@@ -13,86 +13,48 @@ html {
 }
 
 body {
-    background: #fff;
-    color: #333;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    background: var(--bg-primary);
+    color: var(--text-primary);
 }
 
-/* Dark Theme */
-body.dark-theme {
-    background: #1a1a1a;
-    color: #e0e0e0;
-}
-
-body.dark-theme .hero {
+/* Dark Theme Hero */
+html[data-theme="dark"] .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/index_images/index_hero.png") no-repeat center/cover;
 }
 
-body.dark-theme .cards-section {
-    background: #1a1a1a;
+html[data-theme="dark"] .cards-section {
+    background: var(--bg-secondary);
 }
 
-body.dark-theme .scroll-section {
-    background: #1a1a1a;
+html[data-theme="dark"] .scroll-section {
+    background: var(--bg-secondary);
 }
 
-body.dark-theme .scroll-section h2 {
-    color: #e0e0e0;
+html[data-theme="dark"] .scroll-section h2 {
+    color: var(--text-primary);
 }
 
-body.dark-theme .scroll-item {
-    background: #2a2a2a;
-    color: #e0e0e0;
+html[data-theme="dark"] .scroll-item {
+    background: var(--bg-card);
+    color: var(--text-primary);
 }
 
-body.dark-theme .scroll-item span {
-    color: #999;
+html[data-theme="dark"] .scroll-item span {
+    color: var(--text-light);
 }
 
-body.dark-theme .scroll-btn {
+html[data-theme="dark"] .scroll-btn {
     background: rgba(42, 42, 42, 0.95);
-    color: #e0e0e0;
+    color: var(--text-primary);
 }
 
-body.dark-theme .scroll-btn:hover {
-    background: #63b3ed;
-    color: #fff;
+html[data-theme="dark"] .scroll-btn:hover {
+    background: var(--accent-primary);
+    color: var(--text-white);
 }
 
-body.dark-theme .card-overlay {
+html[data-theme="dark"] .card-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-}
-
-/* Theme Toggle Button */
-.theme-toggle-btn {
-    background: transparent;
-    border: 2px solid #333;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #333;
-}
-
-body.dark-theme .theme-toggle-btn {
-    border-color: #e0e0e0;
-    color: #e0e0e0;
-}
-
-.theme-toggle-btn:hover {
-    background: #63b3ed;
-    border-color: #63b3ed;
-    color: #fff;
-    transform: rotate(20deg);
-}
-
-.theme-toggle-btn i {
-    font-size: 18px;
-    transition: transform 0.3s ease;
 }
 
 .hero {
@@ -112,6 +74,7 @@ body.dark-theme .theme-toggle-btn {
     font-weight: 700;
     font-family: "Oswald", sans-serif;
     background: linear-gradient(135deg, #ffffff 0%, #63b3ed 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeInUp 1s ease;
@@ -213,14 +176,13 @@ body.dark-theme .theme-toggle-btn {
     width: 100%;
     padding: 30px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    color: #fff;
+    color: var(--text-white);
     z-index: 1;
-    transition: background 0.4s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px var(--shadow-heavy);
 }
 
 .card:hover img {
@@ -230,8 +192,8 @@ body.dark-theme .theme-toggle-btn {
 .card-btn {
     display: inline-block;
     margin-top: 10px;
-    color: #fff;
-    border: 2px solid #fff;
+    color: var(--text-white);
+    border: 2px solid var(--text-white);
     padding: 10px 18px;
     border-radius: 25px;
     text-decoration: none;
@@ -240,24 +202,22 @@ body.dark-theme .theme-toggle-btn {
 }
 
 .card-btn:hover {
-    background: #fff;
+    background: var(--text-white);
     color: #000;
 }
 
 .scroll-section {
     padding: 50px 0;
-    background: #fff;
+    background: var(--bg-primary);
     position: relative;
-    transition: background-color 0.4s ease;
 }
 
 .scroll-section h2 {
     font-size: 30px;
     font-weight: 700;
     font-family: "Oswald", sans-serif;
-    color: #222;
+    color: var(--text-primary);
     margin-bottom: 20px;
-    transition: color 0.4s ease;
 }
 
 .scroll-container {
@@ -277,17 +237,16 @@ body.dark-theme .theme-toggle-btn {
     flex: 0 0 auto;
     width: 240px;
     border-radius: 15px;
-    background: #f9f9f9;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--bg-card);
+    box-shadow: 0 4px 12px var(--shadow-light);
     text-align: center;
     text-decoration: none;
-    color: #000;
+    color: var(--text-primary);
     transform: scale(0.95);
     opacity: 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease, background-color 0.4s ease, color 0.4s ease;
 }
 
 .scroll-item.visible {
@@ -297,7 +256,7 @@ body.dark-theme .theme-toggle-btn {
 
 .scroll-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 20px var(--shadow-heavy);
 }
 
 .scroll-item img {
@@ -323,9 +282,8 @@ body.dark-theme .theme-toggle-btn {
 .scroll-item span {
     display: block;
     font-size: 13px;
-    color: #777;
+    color: var(--text-light);
     margin-top: 3px;
-    transition: color 0.4s ease;
 }
 
 .scroll-btn {
@@ -338,15 +296,15 @@ body.dark-theme .theme-toggle-btn {
     width: 45px;
     height: 45px;
     font-size: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px var(--shadow-medium);
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 10;
 }
 
 .scroll-btn:hover {
-    background: #63b3ed;
-    color: #fff;
+    background: var(--accent-primary);
+    color: var(--text-white);
     transform: translateY(-50%) scale(1.1);
 }
 

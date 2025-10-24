@@ -1,10 +1,5 @@
 .header {
-    background: #FAFAFA;
-    transition: background-color 0.4s ease;
-}
-
-body.dark-theme .header {
-    background: #2a2a2a;
+    background: var(--bg-header);
 }
 
 .logo-img {
@@ -19,35 +14,45 @@ body.dark-theme .header {
 }
 
 .logo-text {
-    color: #1f2528;
+    color: var(--text-primary);
     font-size: 28px;
-    transition: color 0.4s ease;
-}
-
-body.dark-theme .logo-text {
-    color: #e0e0e0;
 }
 
 .nav-link {
-    color: #1f2528;
+    color: var(--text-primary);
     border-radius: 9999px;
     transition: all 0.3s ease;
     font-weight: 500;
     text-decoration: none;
 }
 
-body.dark-theme .nav-link {
-    color: #e0e0e0;
-}
-
 .nav-link:hover,
 .nav-link.active {
-    background: #1f2528;
-    color: #FAFAFA !important;
+    background: var(--nav-active);
+    color: var(--nav-hover-text) !important;
 }
 
-body.dark-theme .nav-link:hover,
-body.dark-theme .nav-link.active {
-    background: #63b3ed;
-    color: #fff !important;
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid var(--text-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.theme-toggle-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--text-white);
+    transform: rotate(20deg);
+}
+
+.theme-toggle-btn i {
+    font-size: 18px;
 }

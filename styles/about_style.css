@@ -12,22 +12,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #eef3f7;
-    color: #333;
-    transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-body.dark-theme {
-    background: #1a1a1a;
-    color: #e0e0e0;
-}
-
-body.dark-theme .about {
-    background: #1a1a1a;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
 }
 
 .about {
-    transition: background-color 0.4s ease;
+    background: var(--bg-tertiary);
 }
 
 .about-image {
@@ -55,22 +45,13 @@ body.dark-theme .about {
 .about-text h2 {
     margin-bottom: 20px;
     font-size: 30px;
-    color: #006699;
-    transition: color 0.4s ease;
-}
-
-body.dark-theme .about-text h2 {
-    color: #63b3ed;
+    color: var(--accent-secondary);
 }
 
 .about-text p {
     font-size: 18px;
     line-height: 1.7;
-    transition: color 0.4s ease;
-}
-
-body.dark-theme .about-text p {
-    color: #d0d0d0;
+    color: var(--text-secondary);
 }
 
 .about-image {
@@ -79,12 +60,12 @@ body.dark-theme .about-text p {
 
 .about-image:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px var(--shadow-heavy);
 }
 
 .theme-toggle-btn {
     background: transparent;
-    border: 2px solid #333;
+    border: 2px solid var(--text-primary);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -93,18 +74,13 @@ body.dark-theme .about-text p {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #333;
-}
-
-body.dark-theme .theme-toggle-btn {
-    border-color: #e0e0e0;
-    color: #e0e0e0;
+    color: var(--text-primary);
 }
 
 .theme-toggle-btn:hover {
-    background: #63b3ed;
-    border-color: #63b3ed;
-    color: #fff;
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--text-white);
     transform: rotate(20deg);
 }
 

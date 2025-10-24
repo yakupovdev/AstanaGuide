@@ -1,0 +1,85 @@
+/* CSS Variables for Theme System */
+:root {
+    /* Light Theme Colors */
+    color-scheme: light;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f4f9;
+    --bg-tertiary: #eef3f7;
+    --bg-card: #ffffff;
+    --bg-header: #FAFAFA;
+    --bg-footer: #2D2C3C;
+    
+    --text-primary: #333333;
+    --text-secondary: #444444;
+    --text-light: #666666;
+    --text-white: #ffffff;
+    
+    --accent-primary: #18cffc;
+    --accent-secondary: #006699;
+    --accent-hover: #63b3ed;
+    
+    --border-color: #e0e0e0;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-heavy: rgba(0, 0, 0, 0.25);
+    
+    --nav-bg: #1f2528;
+    --nav-active: #1f2528;
+    --nav-hover-text: #FAFAFA;
+    
+    --tab-bg: #f1f3f6;
+    --tab-active: #18cffc;
+    --tab-shadow: rgba(24, 207, 252, 0.35);
+    
+    --input-bg: #ffffff;
+    --input-border: #dee2e6;
+    --input-focus: #18cffc;
+}
+
+/* Dark Theme Colors */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #1a1a1a;
+    --bg-card: #2a2a2a;
+    --bg-header: #2a2a2a;
+    --bg-footer: #1a1a1a;
+    
+    --text-primary: #e0e0e0;
+    --text-secondary: #d0d0d0;
+    --text-light: #999999;
+    --text-white: #ffffff;
+    
+    --accent-primary: #63b3ed;
+    --accent-secondary: #63b3ed;
+    --accent-hover: #8dc9f5;
+    
+    --border-color: #333333;
+    --shadow-light: rgba(0, 0, 0, 0.4);
+    --shadow-medium: rgba(0, 0, 0, 0.5);
+    --shadow-heavy: rgba(0, 0, 0, 0.6);
+    
+    --nav-bg: #2a2a2a;
+    --nav-active: #63b3ed;
+    --nav-hover-text: #ffffff;
+    
+    --tab-bg: #1a1a1a;
+    --tab-active: #63b3ed;
+    --tab-shadow: rgba(99, 179, 237, 0.35);
+    
+    --input-bg: #2a2a2a;
+    --input-border: #444444;
+    --input-focus: #63b3ed;
+}
+
+/* Global Transitions */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
