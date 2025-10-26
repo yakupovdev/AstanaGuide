@@ -324,6 +324,10 @@ html[data-theme="dark"] .planner-summary-empty {
     border: 1px solid rgba(24, 207, 252, 0.3);
     text-align: left;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
 }
 
 html[data-theme="dark"] .planner-summary-item {
@@ -338,6 +342,10 @@ html[data-theme="dark"] .planner-summary-item {
 
 html[data-theme="dark"] .planner-summary-item:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.planner-summary-item-details {
+    flex: 1;
 }
 
 .planner-summary-item h4 {
@@ -359,6 +367,28 @@ html[data-theme="dark"] .planner-summary-item h4 {
 
 html[data-theme="dark"] .planner-summary-item span {
     color: #d0d0d0;
+}
+
+.planner-summary-remove {
+    border: 1px solid #dc3545;
+    background: transparent;
+    color: #dc3545;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.planner-summary-remove:hover {
+    background: #dc3545;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(220, 53, 69, 0.25);
+}
+
+html[data-theme="dark"] .planner-summary-remove:hover {
+    box-shadow: 0 6px 16px rgba(220, 53, 69, 0.4);
 }
 
 .theme-toggle-btn {

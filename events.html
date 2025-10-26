@@ -366,11 +366,31 @@
         plannerSummaryEmpty.style.display = 'none';
         plannerSummaryList.style.display = 'grid';
         wishItems.forEach(content => {
+            const eventId = content.dataset.eventId;
             const summaryItem = document.createElement('div');
             summaryItem.className = 'planner-summary-item';
+            summaryItem.dataset.eventId = eventId;
+
+            const details = document.createElement('div');
+            details.className = 'planner-summary-item-details';
             const title = content.dataset.title || content.querySelector('h3').textContent.trim();
             const dateText = content.dataset.dateText || content.querySelector('span').textContent.trim();
-            summaryItem.innerHTML = `<h4>${title}</h4><span>${dateText}</span>`;
+            details.innerHTML = `<h4>${title}</h4><span>${dateText}</span>`;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'planner-summary-remove';
+            removeBtn.textContent = 'Delete';
+            removeBtn.addEventListener('click', () => {
+                delete storedPlanner[eventId];
+                const buttons = Array.from(content.querySelectorAll('.planner-btn'));
+                applyState(content, buttons, undefined);
+                persistPlanner();
+                renderPlannerSummary();
+            });
+
+            summaryItem.appendChild(details);
+            summaryItem.appendChild(removeBtn);
             plannerSummaryList.appendChild(summaryItem);
         });
     }
