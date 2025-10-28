@@ -76,6 +76,38 @@
     </div>
 </section>
 
+<section class="gallery-section">
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/index_images/AstanaCity.jpg" alt="Astana City">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sights_images/sights_baiterek.jpg" alt="Bayterek Tower">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sights_images/sights_khan_shatyr.jpg" alt="Khan Shatyr">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sights_images/hazrat_sultan_mosque.png" alt="Nur-Astana Mosque">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sights_images/expo.jpg" alt="Expo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sights_images/independence_square.jpg" alt="Independence Square">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sights_images/central_park_astana.webp" alt="Central Park Astana">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sights_images/ak_orda.png" alt="Ak Orda">
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer class="footer mt-auto">
     <div class="container text-center">
         <p>© 2025 Astana Guide. All Rights Reserved.
@@ -87,9 +119,10 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    $(document).ready(function () {
         const aboutImage = document.querySelector('.about-image');
         const aboutText = document.querySelector('.about-text');
 
@@ -103,6 +136,20 @@
 
         if (aboutImage) observer.observe(aboutImage);
         if (aboutText) observer.observe(aboutText);
+
+        const galleryObserver = new IntersectionObserver(entries => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        $(entry.target).addClass('visible');
+                    }, index * 100);
+                }
+            });
+        }, {threshold: 0.1});
+
+        $('.gallery-item').each(function () {
+            galleryObserver.observe(this);
+        });
     });
 </script>
 
