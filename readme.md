@@ -124,6 +124,17 @@ The **Contact page** allows users to reach out and provide feedback.
 ---
 <br>
 
+# 📱Adaptive mode
+
+![image](readmeImages/adaptive_images/1.jpg)
+<br>
+![image1](readmeImages/adaptive_images/2.jpg)
+<br>
+![image2](readmeImages/adaptive_images/3.jpg)
+<br>
+![image3](readmeImages/adaptive_images/4.jpg)
+---
+
 
 
 # 🚀Project Update: Astana Guide
@@ -177,6 +188,37 @@ We’re excited to announce a major update to **Astana Guide**, bringing new cus
 - 🖼️ **About Us page gallery** → a brand-new **photo gallery** showcasing the Astana Guide team, city moments, and project highlights.  
 
 🧭 With these updates, **Astana Guide** becomes not just a travel helper — but your **personalized city experience platform**.
+
+
+
+# 🚀 Project Update: Astana Guide  
+
+**(Version V5.0 – Assignment 6)**  
+
+We’re thrilled to introduce **Astana Guide V5.0**, marking another big step forward in making our platform faster, smarter, and more user-friendly than ever! 🌆  
+
+
+
+### ✨ What’s new  
+
+- 📱 **Full Adaptive Update**  
+  → The website now perfectly adjusts to **any screen size** — from phones to large desktops. Navigation, layout, and visuals all scale smoothly for a seamless experience.  
+
+- 🔗 **Link Optimization**  
+  → Corrected and refined **all internal and external links** for smoother transitions and better navigation throughout the site.  
+
+- 💬 **Form API Integration**  
+  → Connected a **working API for form submissions**, allowing users to send feedback or contact messages directly — fast, secure, and reliable.  
+
+- ⚙️ **Debug & Stability Improvements**  
+  → Fixed several minor bugs, polished animations, and improved the loading performance for a cleaner, more stable experience.  
+
+- 🎨 **Visual Polish**  
+  → Enhanced spacing, alignment, and consistency across pages to give the interface a modern and professional feel.  
+
+---
+
+🧭 With **V5.0**, **Astana Guide** becomes even more **responsive, connected, and optimized**, continuing its mission to be your **smartest companion for exploring the city**. 🌍
 
 
 <br>
