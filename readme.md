@@ -124,6 +124,17 @@ The **Contact page** allows users to reach out and provide feedback.
 ---
 <br>
 
+# 📱Adaptive mode
+
+![image](readmeImages/adaptive_images/1.jpg)
+<br>
+![image1](readmeImages/adaptive_images/2.jpg)
+<br>
+![image2](readmeImages/adaptive_images/3.jpg)
+<br>
+![image3](readmeImages/adaptive_images/4.jpg)
+---
+
 
 
 # 🚀Project Update: Astana Guide
