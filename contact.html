@@ -39,22 +39,29 @@
 <body class="d-flex flex-column min-vh-100">
 
 <header class="header shadow-sm">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
-        <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
-            <img class="logo-img me-2" src="images/icon.png" alt="Logo">
-            <span class="logo-text fw-bold">Astana Guide</span>
-        </a>
-        <nav class="nav d-flex align-items-center">
-            <ul class="nav list-unstyled d-flex mb-0 me-3">
-                <li><a href="index.html" class="nav-link px-3">Home</a></li>
-                <li><a href="sights.html" class="nav-link px-3">Sights</a></li>
-                <li><a href="events.html" class="nav-link px-3">Events</a></li>
-                <li><a href="about.html" class="nav-link px-3">About Us</a></li>
-            </ul>
-            <button id="theme-toggle" class="theme-toggle-btn">
-                <i class="fas fa-moon"></i>
+    <div class="container">
+        <div class="header-wrapper d-flex justify-content-between align-items-center py-3">
+            <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+                <img class="logo-img me-2" src="images/icon.png" alt="Logo">
+                <span class="logo-text fw-bold">Astana Guide</span>
+            </a>
+            <button class="burger-menu" id="burger-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-        </nav>
+            <nav class="nav d-flex align-items-center" id="nav-menu">
+                <ul class="nav-list list-unstyled d-flex mb-0">
+                    <li><a href="index.html" class="nav-link px-3">Home</a></li>
+                    <li><a href="sights.html" class="nav-link px-3">Sights</a></li>
+                    <li><a href="events.html" class="nav-link px-3">Events</a></li>
+                    <li><a href="about.html" class="nav-link px-3">About Us</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
     </div>
 </header>
 
@@ -172,6 +179,30 @@
                 console.error(error);
                 messageBox.innerHTML = "<div class='text-danger fw-bold'>Network error 😞</div>";
             }
+        });
+
+        const burgerToggle = document.getElementById('burger-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        burgerToggle.addEventListener('click', function () {
+            burgerToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!navMenu.contains(event.target) && !burgerToggle.contains(event.target)) {
+                burgerToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 768) {
+                    burgerToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
         });
     });
 </script>

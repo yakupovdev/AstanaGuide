@@ -1,4 +1,4 @@
-// Theme Toggle Script - Universal for all pages
+
 (function() {
     'use strict';
 
@@ -11,7 +11,7 @@
                 return stored;
             }
         } catch (error) {
-            // ignore storage errors
+            
         }
 
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -43,7 +43,7 @@
         try {
             localStorage.setItem('theme', theme);
         } catch (error) {
-            // storage might be unavailable; ignore
+           
         }
     }
 

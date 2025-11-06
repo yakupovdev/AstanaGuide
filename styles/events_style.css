@@ -490,13 +490,53 @@ html[data-theme="dark"] .theme-toggle-btn {
     .planner-summary-section {
         padding-bottom: 40px;
     }
+}
 
-    .theme-toggle-btn {
-        width: 32px;
-        height: 32px;
+@media (max-width: 480px) {
+    .events-section h2 {
+        font-size: 1.75rem;
     }
 
-    .theme-toggle-btn i {
-        font-size: 14px;
+    .event-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .event-card p {
+        font-size: 0.9rem;
+    }
+
+    .planner-toggle-row button {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .planner-summary {
+        padding: 18px 20px;
+    }
+
+    .planner-summary h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .events-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .event-card {
+        padding: 15px;
+    }
+
+    .event-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .scroll-item {
+        width: 100px;
+    }
+
+    .scroll-item img {
+        height: 65px;
     }
 }

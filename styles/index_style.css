@@ -353,13 +353,45 @@ html[data-theme="dark"] .card-overlay {
         height: 35px;
         font-size: 16px;
     }
+}
 
-    .theme-toggle-btn {
-        width: 32px;
-        height: 32px;
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
     }
 
-    .theme-toggle-btn i {
-        font-size: 14px;
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    #cards {
+        padding: 30px 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
     }
 }

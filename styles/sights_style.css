@@ -383,16 +383,25 @@ html[data-theme="dark"] .sight-toggle-status {
     .sight-view {
         padding: 25px;
         margin-bottom: 20px;
+        min-height: 400px;
+    }
+
+    .sight-view.sight-view-expanded {
+        min-height: 600px;
+        padding: 40px 30px;
     }
 
     .sight-tabs {
         gap: 10px;
         margin-bottom: 22px;
+        flex-wrap: wrap;
     }
 
     .sight-tab {
         padding: 8px 20px;
         font-size: 14px;
+        flex: 1 1 auto;
+        min-width: 100px;
     }
 
     .sight-content h3 {
@@ -401,53 +410,168 @@ html[data-theme="dark"] .sight-toggle-status {
 
     .sight-content p {
         font-size: 16px;
+        line-height: 1.5;
     }
 
     .sight-content img.img-fluid {
-        max-height: 250px;
+        max-height: 280px;
+    }
+
+    .sight-content img.img-fluid.sight-image-expanded {
+        max-height: 480px;
+    }
+
+    .sight-map {
+        height: 320px;
+    }
+
+    .sight-info-actions {
+        gap: 10px;
+    }
+
+    .sight-info-actions .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .scroll-container {
+        gap: 14px;
+    }
+
+    .scroll-item {
+        width: 130px;
+    }
+
+    .scroll-item img {
+        height: 90px;
+    }
+}
+
+@media (max-width: 576px) {
+    .scroll-section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .sight-view {
+        padding: 20px 15px;
+        min-height: 380px;
+    }
+
+    .sight-view.sight-view-expanded {
+        min-height: 550px;
+        padding: 32px 20px;
+    }
+
+    .sight-tabs {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .sight-tab {
+        padding: 7px 14px;
+        font-size: 13px;
+        min-width: 90px;
+    }
+
+    .sight-content h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .sight-content p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .sight-content img.img-fluid {
+        max-height: 240px;
+        margin-bottom: 15px;
+    }
+
+    .sight-content img.img-fluid.sight-image-expanded {
+        max-height: 420px;
     }
 
     .sight-map {
         height: 280px;
     }
 
-    .theme-toggle-btn {
-        width: 35px;
-        height: 35px;
+    .sight-info-actions {
+        gap: 8px;
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .theme-toggle-btn i {
-        font-size: 16px;
+    .sight-info-actions .btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+        width: 100%;
     }
-}
 
-@media (max-width: 576px) {
-    .sight-view {
-        padding: 20px 15px;
+    .scroll-container {
+        gap: 12px;
+        padding: 10px 4px;
     }
 
     .scroll-item {
-        width: 120px;
+        width: 110px;
     }
 
     .scroll-item img {
-        height: 80px;
+        height: 75px;
+    }
+
+    .scroll-item p {
+        font-size: 0.8rem;
+        margin: 6px;
+    }
+
+    .sight-toggle-status {
+        font-size: 0.85rem;
+    }
+
+    .sight-toggle-switch {
+        width: 42px;
+        height: 22px;
+    }
+
+    .sight-toggle-slider::after {
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 3px;
+    }
+
+    .sight-toggle-input:checked + .sight-toggle-slider::after {
+        transform: translateX(18px);
+    }
+}
+
+@media (max-width: 400px) {
+    .sight-view {
+        padding: 15px 10px;
+    }
+
+    .sight-content h3 {
+        font-size: 18px;
+    }
+
+    .sight-content p {
+        font-size: 14px;
     }
 
     .sight-tab {
-        padding: 8px 16px;
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 80px;
     }
 
-    .sight-map {
-        height: 240px;
+    .scroll-item {
+        width: 100px;
     }
 
-    .theme-toggle-btn {
-        width: 32px;
-        height: 32px;
-    }
-
-    .theme-toggle-btn i {
-        font-size: 14px;
+    .scroll-item img {
+        height: 65px;
     }
 }
