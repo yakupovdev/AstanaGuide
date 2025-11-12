@@ -8,7 +8,7 @@ const IMAGE_HIDDEN_TEXT = 'Image hidden';
 const sightVariants = {
     'bayterek': {
         images: [
-            {src: 'images/sights_images/sights_baiterek.jpg', alt: 'View of Bayterek Tower at sunset'},
+            {src: 'public/images/sights_images/sights_baiterek.jpg', alt: 'View of Bayterek Tower at sunset'},
             {src: 'https://www.tourstouzbekistan.com/uploads/blog/Astana-Baiterek2.jpg', alt: 'Downtown Astana skyline at night'}
         ],
         links: [
@@ -18,8 +18,8 @@ const sightVariants = {
     },
     'khan-shatyr': {
         images: [
-            {src: 'images/sights_images/sights_khan_shatyr1.jpg', alt: 'Khan Shatyr exterior at dusk'},
-            {src: 'images/sights_images/sights_khan_shatyr.jpg', alt: 'Khan Shatyr interior dome'}
+            {src: 'public/images/sights_images/sights_khan_shatyr1.jpg', alt: 'Khan Shatyr exterior at dusk'},
+            {src: 'public/images/sights_images/sights_khan_shatyr.jpg', alt: 'Khan Shatyr interior dome'}
         ],
         links: [
             {href: '#map-khan-shatyr', label: 'Khan Shatyr map view'},
@@ -28,7 +28,7 @@ const sightVariants = {
     },
     'hazret-sultan': {
         images: [
-            {src: 'images/sights_images/hazrat_sultan_mosque.png', alt: 'Hazret Sultan Mosque from the front'},
+            {src: 'public/images/sights_images/hazrat_sultan_mosque.png', alt: 'Hazret Sultan Mosque from the front'},
             {src: 'https://astana.citypass.kz/wp-content/uploads/MxOCyZ.jpg', alt: 'Golden domes near the Ishim River'}
         ],
         links: [
@@ -38,7 +38,7 @@ const sightVariants = {
     },
     'akorda': {
         images: [
-            {src: 'images/sights_images/ak_orda.png', alt: 'Akorda Presidential Palace facade'},
+            {src: 'public/images/sights_images/ak_orda.png', alt: 'Akorda Presidential Palace facade'},
             {src: 'https://upload.wikimedia.org/wikivoyage/ru/f/f2/Ak_Orda_Presidential_Palace_by_night_05.jpg', alt: 'View across Independence Square'}
         ],
         links: [
@@ -48,7 +48,7 @@ const sightVariants = {
     },
     'nur-astana': {
         images: [
-            {src: 'images/sights_images/nur_astana_mosque.png', alt: 'Nur-Astana Mosque main entrance'},
+            {src: 'public/images/sights_images/nur_astana_mosque.png', alt: 'Nur-Astana Mosque main entrance'},
             {src: 'https://media.istockphoto.com/id/1453247591/photo/panoramic-view-of-snow-white-modern-hazaret-sultan-mosque-at-night-nur-sultan-astana.jpg?s=612x612&w=0&k=20&c=as6DAC0KmDP7ggBUsDkuZ3NwUBSx6WpddhQm3YniCCk=', alt: 'Green promenade near Nur-Astana Mosque'}
         ],
         links: [
@@ -58,7 +58,7 @@ const sightVariants = {
     },
     'expo': {
         images: [
-            {src: 'images/sights_images/expo.jpg', alt: 'Nur Alem pavilion at EXPO 2017'},
+            {src: 'public/images/sights_images/expo.jpg', alt: 'Nur Alem pavilion at EXPO 2017'},
             {src: 'https://www.dirtymonitor.com/projects/img/projets/595b89f2a5085-expo2017-astana-3d-projection-mappingvideo-futurenergy-dirtymonitor-slider7.jpg', alt: 'Astana Guide blueprint illustration'}
         ],
         links: [
@@ -68,7 +68,7 @@ const sightVariants = {
     },
     'square': {
         images: [
-            {src: 'images/sights_images/independence_square.jpg', alt: 'Independence Square fountains'},
+            {src: 'public/images/sights_images/independence_square.jpg', alt: 'Independence Square fountains'},
             {src: 'https://www.shutterstock.com/image-photo/astana-kazakhstan-06202017-monument-kazakh-600nw-2621371465.jpg', alt: 'Akorda Palace from the square'}
         ],
         links: [
@@ -78,7 +78,7 @@ const sightVariants = {
     },
     'park': {
         images: [
-            {src: 'images/sights_images/central_park_astana.webp', alt: 'Astana Central Park lake'},
+            {src: 'public/images/sights_images/central_park_astana.webp', alt: 'Astana Central Park lake'},
             {src: 'https://ink-a.com/assets/components/phpthumbof/cache/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B2%D1%8F%281%29.aa0fdfa69740d22a4e3cc983a4aaa0ed.webp', alt: 'Stylised outline of Astana attractions'}
         ],
         links: [

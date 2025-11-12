@@ -44,8 +44,8 @@ It serves as a digital guide for travelers and residents who want to:
 # 🌐 Website Structure
 
 ## 🏠 Home Page
-![Homepage Header](readmeImages/homepageHeader.png)
-![Homepage Center](readmeImages/homepageCenter.png)
+![Homepage Header](public/images/readmeImages/homepageHeader.png)
+![Homepage Center](public/images/readmeImages/homepageCenter.png)
 
 The **home page** serves as the welcoming entry point to the *Astana Guide* website.  
 It introduces users to the project and provides quick navigation to the main sections.  
@@ -57,12 +57,12 @@ It introduces users to the project and provides quick navigation to the main sec
 - **Preview cards** → direct links to the *Sights* and *Events* pages with images and descriptions.  
 - **List of sights and events** - as well as a list of attractions and events you can interact with.
 - **Footer** → copyright + quick link to the *Contact* page.  
-![Homepage Footer](readmeImages/homepageFooter.png)
+![Homepage Footer](public/images/readmeImages/homepageFooter.png)
 ---
 
 ## 🏙️ Sights Page
-![Sights Page](readmeImages/sightspageInfo.png)
-![Sights Page](readmeImages/sightspageMap.png)
+![Sights Page](public/images/readmeImages/sightspageInfo.png)
+![Sights Page](public/images/readmeImages/sightspageMap.png)
 
 
 
@@ -80,8 +80,8 @@ The **Sights page** showcases Astana’s most popular landmarks and cultural att
 ---
 
 ## 🎉 Events Page
-![Events Page](readmeImages/eventspageCenter.png)
-![Events Page](readmeImages/eventspageList.png)
+![Events Page](public/images/readmeImages/eventspageCenter.png)
+![Events Page](public/images/readmeImages/eventspageList.png)
 
 
 
@@ -99,7 +99,7 @@ The **Events page** highlights upcoming concerts, shows, and sports matches in A
 ---
 ## ℹ️ About Us Page
 
-![About Page](readmeImages/aboutpage.png)
+![About Page](public/images/readmeImages/aboutpage.png)
 
 The **About Us page** introduces the Astana Guide project and its purpose.  
 
@@ -111,7 +111,7 @@ The **About Us page** introduces the Astana Guide project and its purpose.
 ---
 
 ## ✉️ Contact page 
-![Contact Page](readmeImages/contactpage.png)
+![Contact Page](public/images/readmeImages/contactpage.png)
 
 The **Contact page** allows users to reach out and provide feedback.  
 
@@ -126,13 +126,13 @@ The **Contact page** allows users to reach out and provide feedback.
 
 # 📱Adaptive mode
 
-![image](readmeImages/adaptive_images/1.jpg)
+![image](public/images/readmeImages/adaptive_images/1.jpg)
 <br>
-![image1](readmeImages/adaptive_images/2.jpg)
+![image1](public/images/readmeImages/adaptive_images/2.jpg)
 <br>
-![image2](readmeImages/adaptive_images/3.jpg)
+![image2](public/images/readmeImages/adaptive_images/3.jpg)
 <br>
-![image3](readmeImages/adaptive_images/4.jpg)
+![image3](public/images/readmeImages/adaptive_images/4.jpg)
 ---
 
 

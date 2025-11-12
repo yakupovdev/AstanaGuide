@@ -19,7 +19,7 @@ body {
 
 
 html[data-theme="dark"] .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/index_images/index_hero.png") no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/public/images/index_images/index_hero.png") no-repeat center/cover;
 }
 
 html[data-theme="dark"] .cards-section {
