@@ -1,4 +1,4 @@
-# <img src="images/icon.png" alt="Astana Guide Logo" width="40" style="vertical-align: middle;"/> Astana Guide (HTML + CSS)
+# <img src="public/images/icon.png" alt="Astana Guide Logo" width="40" style="vertical-align: middle;"/> Astana Guide (HTML + CSS)
 ### 👥 Authors: *Vyacheslav Yakupov* and *Marlen Zhumagulov*
 
 ---
